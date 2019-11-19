@@ -1,0 +1,167 @@
+﻿/*
+Theme Name: NaturalSpa
+Theme URI: https://wedesignthemes.com/themes/natural-spa/
+Author: the DesignThemes team
+Author URI: https://wedesignthemes.com/
+Description: Natural Spa Theme By DesignThemes
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: naturalspa
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+#main-menu ul.menu > li > a , p, body, ul li, li a{
+	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif !important;
+}
+.dt-sc-button.medium {
+	margin: 0 auto;
+}
+.dt-sc-counter.type2 .dt-sc-couter-icon-holder, .dt-sc-counter.type3 .dt-sc-couter-icon-holder span, .dt-sc-counter.type4 .dt-sc-couter-icon-holder span, .dt-sc-counter.type4:hover .dt-sc-counter-number, .dt-sc-counter.type6:hover .dt-sc-counter-number, .dt-sc-counter.type5:hover h4, .dt-sc-counter.type5:hover .dt-sc-couter-icon-holder, .dt-sc-dark-bg .dt-sc-counter {
+    color: #b44862;
+}
+/*////////////////////////////Hanh/////////////////////////////////////*/
+/*
+Theme Name: NaturalSpa
+Theme URI: https://wedesignthemes.com/themes/natural-spa/
+Author: the DesignThemes team
+Author URI: https://wedesignthemes.com/
+Description: Natural Spa Theme By DesignThemes
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: naturalspa
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@media screen and (min-width: 769px) {
+    .booking-control select, .booking-control input {
+        width: calc(100% - 45px);
+        border: none;
+        font-size: 14px;
+        height: 45px;
+        padding: 10px 5px;
+    }
+}
+
+#main-menu ul.menu > li > a , p, body, ul li, li a{
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif !important;
+}
+.dt-sc-button.medium {
+    margin: 0 auto;
+}
+.dt-sc-counter.type2 .dt-sc-couter-icon-holder, .dt-sc-counter.type3 .dt-sc-couter-icon-holder span, .dt-sc-counter.type4 .dt-sc-couter-icon-holder span, .dt-sc-counter.type4:hover .dt-sc-counter-number, .dt-sc-counter.type6:hover .dt-sc-counter-number, .dt-sc-counter.type5:hover h4, .dt-sc-counter.type5:hover .dt-sc-couter-icon-holder, .dt-sc-dark-bg .dt-sc-counter {
+    color: #b44862;
+}
+.ab-formGroup label {
+    display: none;
+}
+.booking-control {
+    height: 45px;
+    /* overflow: hidden; */
+    margin-bottom: 15px;
+}
+.ab-formGroup input, .ab-formGroup select.ab-select-location, .ab-formGroup select.ab-select-service, .ab-formGroup input.ab-date-from, .ab-formGroup input.ab-full-name, .ab-formGroup input.ab-user-email {
+    width: calc(100% - 45px) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    height: 45px !important;
+    padding: 10px 5px !important;
+        color: #507FAD;
+}
+.ab-formGroup > .booking-control {
+    margin-top: 15px !important;
+}
+.bookly-table > *, .ab-left, .ab-service-step .ab-time-range select {
+    display: block;
+    width: 100%!important;
+}
+.booking-control select , .booking-control input{
+        color: #626262;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: none;
+    height: 45px !important;
+}
+.bookly-js-chain-item.bookly-table.ab-row > div:nth-child(2), .bookly-js-chain-item.bookly-table.ab-row > div:nth-child(4), .ab-time-range, .ab-week-days , .ab-bold{
+    display: none!important;
+}
+.ab-formGroup > .booking-control {
+    margin-top: 0 !important;
+}
+.ab-row {
+    margin: 0px;
+}
+.ab-service-step .ab-available-date {
+    margin-right: 0px !important;
+}
+.bookly-form input[type="text"] {
+        font-weight: 500;
+    font-family: "Roboto";
+}
+.booking-control:after {
+    content: "\f274";
+    font: normal normal normal 14px/1 FontAwesome;
+    display: block;
+    background: #507FAD;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    right: 60px;
+    margin-top: -45px;
+    padding: 13px;
+    color: #fff;
+    font-size: 20px;
+}
+.ab-formGroup.ab-location > .booking-control:after {
+    content: "\f041";
+    padding: 13px 16px;
+}
+.ab-formGroup.ab-booking-date > .booking-control:after {
+    content: "\f073";
+}
+.dt-appointment-form-wrapper.vc_column_container {
+    background-color: #91AFC4 !important
+}
+.ab-details-step .ab-formGroup .intl-tel-input input {
+    padding-left: 50px !important;
+    width: calc(100% - 45px) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    height: 45px !important;
+}
+.ab-nav-steps {
+    border-top: 1px solid #CAEBFF !important;
+}
+.ab-back-step, .ab-next-step, .ab-mobile-next-step, .ab-mobile-prev-step, .ab-progress-tracker > .active .step, .bookly-form .picker__frame, .ab-service-step .ab-week-days label, .ab-add-item, .btn-apply-coupon, .ab-columnizer .ab-hour:hover .ab-hour-icon span, .ab-time-next, .ab-time-prev, .bookly-btn-submit, .bookly-round-button {
+    background-color: #CAEBFF !important;
+}
+.dt-menu-toggle {
+	background: #1f3855;}
+.admin-bar .is-sticky .main-header-wrapper {
+	top:0 !important;
+}
+@media (max-width: 767px) {
+	.container {
+		width:100% !important;
+	}
+}
+.ab-custom-field-row label {
+	display:block;
+	color:#fff !important;
+}
+.ab-custom-field-row .booking-control:after {
+	display:none;
+}
+.bookly-form textarea {
+	border:1px solid white !important;
+	    background: #fff !important;
+}
+.ab-formGroup > label {
+	color:#fff !important;
+}

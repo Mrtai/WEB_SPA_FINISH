@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf1344d0798b4f1c8999dfb3ebcaec06" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="DB_SPAModel.CHI_NHANH" Width="1.5" PointX="3.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.CHI_TIET_HOA_DON" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.DICH_VU" Width="1.5" PointX="8.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.HOA_DON" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.KHACH_HANG" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.LICH_HEN" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_SPAModel.SAN_PHAM" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_O_CHI_NHAN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__HOA_DON" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SPAModel.FK_HOA_DON_THANH_TOA_KHACH_HA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="6.75" PointY="0.875" />
+        <EntityTypeShape EntityType="DB_SPAModel.TAI_KHOAN" Width="1.5" PointX="2.125" PointY="9.125" />
+        <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
