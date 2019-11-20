@@ -21,6 +21,11 @@
         <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="6.75" PointY="0.875" />
         <EntityTypeShape EntityType="DB_SPAModel.TAI_KHOAN" Width="1.5" PointX="2.125" PointY="9.125" />
         <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" />
+        <EntityTypeShape EntityType="DB_SPAModel.CartItem" Width="1.5" PointX="8.25" PointY="4" />
+        <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="6" PointY="11.25" />
+        <AssociationConnector Association="DB_SPAModel.FK_CartItem_KHACH_HANG" />
+        <AssociationConnector Association="DB_SPAModel.FK_CartItem_SAN_PHAM" />
+        <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

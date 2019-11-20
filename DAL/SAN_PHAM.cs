@@ -17,6 +17,7 @@ namespace DAL
         public SAN_PHAM()
         {
             this.CHI_TIET_HOA_DON = new HashSet<CHI_TIET_HOA_DON>();
+            this.CartItems = new HashSet<CartItem>();
         }
     
         public int MA_SP { get; set; }
@@ -26,5 +27,6 @@ namespace DAL
         public Nullable<double> GIA { get; set; }
     
         public virtual ICollection<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
     }
 }

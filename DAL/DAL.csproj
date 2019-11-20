@@ -48,12 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartItem.cs">
+      <DependentUpon>SpaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CHI_NHANH.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CHI_TIET_HOA_DON.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\cartItemDAL.cs" />
     <Compile Include="DAL\chiNhanhDAL.cs" />
     <Compile Include="DAL\chiTietHoaDonDAL.cs" />
     <Compile Include="DAL\dichVuDAL.cs" />
@@ -73,6 +77,9 @@
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LICH_HEN.cs">
+      <DependentUpon>SpaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAI_DICHVU.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NHAN_VIEN.cs">

@@ -12,20 +12,15 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class DICH_VU
+    public partial class CartItem
     {
-        public DICH_VU()
-        {
-            this.LICH_HEN = new HashSet<LICH_HEN>();
-        }
+        public int CartID { get; set; }
+        public Nullable<int> MA_KH { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
+        public Nullable<int> MA_SP { get; set; }
     
-        public int MA_DV { get; set; }
-        public string TEN_DICH_VU { get; set; }
-        public string CHI_TIET { get; set; }
-        public Nullable<double> GIA { get; set; }
-        public Nullable<int> MALOAI { get; set; }
-    
-        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
-        public virtual LOAI_DICHVU LOAI_DICHVU { get; set; }
+        public virtual KHACH_HANG KHACH_HANG { get; set; }
+        public virtual SAN_PHAM SAN_PHAM { get; set; }
     }
 }
