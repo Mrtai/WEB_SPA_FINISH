@@ -44,6 +44,13 @@ namespace DAL.DAL
             return list;
         }
 
+        public List<CHI_TIET_HOA_DON> GetDVByMa(int pMaHD)
+        {
+            List<CHI_TIET_HOA_DON> result = new List<CHI_TIET_HOA_DON>();
+            result = context.CHI_TIET_HOA_DON.Where(m => m.MA_HD == pMaHD).ToList();
+            return result;
+        }
+
         public CHI_TIET_HOA_DON GetDVByMa(int pMaHD, int pMaSP)
         {
             CHI_TIET_HOA_DON result = new CHI_TIET_HOA_DON();

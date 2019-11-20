@@ -28,5 +28,17 @@ namespace SpaWeb.Admin.Bill
             var items = dAL.GetList();
             return items;
         }
+
+        protected void btn_Delete_Click(object sender, EventArgs e)
+        {
+            hoaDonDAL dAL = new hoaDonDAL();
+            int id = Convert.ToInt32((sender as LinkButton).CommandArgument);
+            int kq = dAL.Delete(id);
+            lb_messenger.Visible = true;
+            if (kq != 0)
+                lb_messenger.Text = "Xóa Thành Công";
+            
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
     }
 }

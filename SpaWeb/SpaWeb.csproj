@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\DetailBill.aspx" />
     <Content Include="Admin\ListBill.aspx" />
     <Content Include="Admin\AddSanPham.aspx" />
     <Content Include="Admin\EditSamPham.aspx" />
@@ -655,6 +656,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\DetailBill.aspx.cs">
+      <DependentUpon>DetailBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DetailBill.aspx.designer.cs">
+      <DependentUpon>DetailBill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListBill.aspx.cs">
       <DependentUpon>ListBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
