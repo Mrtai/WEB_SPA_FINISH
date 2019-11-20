@@ -56,5 +56,11 @@ namespace DAL.DAL
             result = context.TAI_KHOAN.FirstOrDefault(m => m.MA_TK == pMa);
             return result;
         }
+        public TAI_KHOAN GetByUsername(string username)
+        {
+            TAI_KHOAN result = new TAI_KHOAN();
+            result = context.TAI_KHOAN.FirstOrDefault(m => m.USERNAME == username);
+            return result;
+        }
     }
 }

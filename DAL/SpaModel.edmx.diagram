@@ -14,6 +14,7 @@
         <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__HOA_DON" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_HOA_DON_THANH_TOA_KHACH_HA" ManuallyRouted="false" />
+
         <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="6.75" PointY="0.875" />
         <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="4.75" PointY="10.75" />
         <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" />
@@ -23,6 +24,14 @@
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_O_CHI_NHAN" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA" />
+
+        <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="8.25" PointY="3.25" />
+        <EntityTypeShape EntityType="DB_SPAModel.TAI_KHOAN" Width="1.5" PointX="2.125" PointY="9.125" />
+        <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" />
+        <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="6" PointY="11.25" />
+        <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" />
+
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

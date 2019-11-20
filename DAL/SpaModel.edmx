@@ -277,9 +277,15 @@
           <Property Name="TEN_DICH_VU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CHI_TIET" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="GIA" Type="Double" />
+
           <Property Name="MALOAI" Type="Int32" />
           <NavigationProperty Name="LOAI_DICHVU" Relationship="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" FromRole="DICH_VU" ToRole="LOAI_DICHVU" />
           <NavigationProperty Name="LICH_HEN" Relationship="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" FromRole="DICH_VU" ToRole="LICH_HEN" />
+
+          <NavigationProperty Name="LICH_HEN" Relationship="Self.FK_LICH_HEN_LAM_DICH_VU" FromRole="DICH_VU" ToRole="LICH_HEN" />
+          <Property Name="MALOAI" Type="Int32" />
+          <NavigationProperty Name="LOAI_DICHVU" Relationship="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" FromRole="DICH_VU" ToRole="LOAI_DICHVU" />
+
         </EntityType>
         <EntityType Name="HOA_DON">
           <Key>
@@ -380,6 +386,7 @@
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
           </AssociationSet>
+
           <EntitySet Name="LICH_HEN" EntityType="DB_SPAModel.LICH_HEN" />
           <AssociationSet Name="FK_LICH_HEN_O_CHI_NHAN" Association="DB_SPAModel.FK_LICH_HEN_O_CHI_NHAN">
             <End Role="CHI_NHANH" EntitySet="CHI_NHANH" />
@@ -392,6 +399,12 @@
           <AssociationSet Name="FK_LICH_HEN_CUA_KHACH_HA" Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="LICH_HEN" EntitySet="LICH_HEN" />
+
+          <EntitySet Name="LOAI_DICHVU" EntityType="DB_SPAModel.LOAI_DICHVU" />
+          <AssociationSet Name="FK_DICH_VU_LOAI_DICHVU" Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU">
+            <End Role="LOAI_DICHVU" EntitySet="LOAI_DICHVU" />
+            <End Role="DICH_VU" EntitySet="DICH_VU" />
+
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="NHAN_VIEN">
@@ -449,6 +462,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+
         <EntityType Name="LICH_HEN">
           <Key>
             <PropertyRef Name="MA_LH" />
@@ -498,6 +512,26 @@
             </Principal>
             <Dependent Role="LICH_HEN">
               <PropertyRef Name="MA_KH" />
+
+        <EntityType Name="LOAI_DICHVU">
+          <Key>
+            <PropertyRef Name="MAlLOAI" />
+          </Key>
+          <Property Name="MAlLOAI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_LOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <NavigationProperty Name="DICH_VU" Relationship="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" FromRole="LOAI_DICHVU" ToRole="DICH_VU" />
+        </EntityType>
+        <Association Name="FK_DICH_VU_LOAI_DICHVU">
+          <End Type="DB_SPAModel.LOAI_DICHVU" Role="LOAI_DICHVU" Multiplicity="0..1" />
+          <End Type="DB_SPAModel.DICH_VU" Role="DICH_VU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAI_DICHVU">
+              <PropertyRef Name="MAlLOAI" />
+            </Principal>
+            <Dependent Role="DICH_VU">
+              <PropertyRef Name="MALOAI" />
+
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -600,6 +634,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+
           <EntitySetMapping Name="LICH_HEN">
             <EntityTypeMapping TypeName="DB_SPAModel.LICH_HEN">
               <MappingFragment StoreEntitySet="LICH_HEN">
@@ -611,6 +646,14 @@
                 <ScalarProperty Name="MA_CN" ColumnName="MA_CN" />
                 <ScalarProperty Name="MA_KH" ColumnName="MA_KH" />
                 <ScalarProperty Name="MA_LH" ColumnName="MA_LH" />
+
+          <EntitySetMapping Name="LOAI_DICHVU">
+            <EntityTypeMapping TypeName="DB_SPAModel.LOAI_DICHVU">
+              <MappingFragment StoreEntitySet="LOAI_DICHVU">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TEN_LOAI" ColumnName="TEN_LOAI" />
+                <ScalarProperty Name="MAlLOAI" ColumnName="MAlLOAI" />
+
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
