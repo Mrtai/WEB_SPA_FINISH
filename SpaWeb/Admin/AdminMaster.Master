@@ -222,8 +222,14 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/icons/mdi.html">
-              <span class="menu-title">Icons</span>
+            <a class="nav-link" href="ListBill.aspx">
+              <span class="menu-title">Bill</span>
+              <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SanPhamLoad.aspx">
+              <span class="menu-title">Product</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>

@@ -22,7 +22,6 @@ namespace DAL.DAL
             HOA_DON k = context.HOA_DON.FirstOrDefault(m => m.MA_HD == p.MA_HD);
             if (k != null)
             {
-                k.MA_KH = p.MA_KH;
                 k.TONG_TIEN = p.TONG_TIEN;
             }
             result = context.SaveChanges();
@@ -40,7 +39,8 @@ namespace DAL.DAL
         public List<HOA_DON> GetList()
         {
             List<HOA_DON> list = new List<HOA_DON>();
-            list = context.HOA_DON.ToList();
+            HOA_DON h = new HOA_DON();
+            list = context.HOA_DON.OrderBy(x=>x.MA_HD).ToList();
             return list;
         }
 

@@ -23,6 +23,9 @@
         <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" />
         <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="6" PointY="11.25" />
         <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" />
+        <EntityTypeShape EntityType="DB_SPAModel.CartItem" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="DB_SPAModel.FK_CartItem_KHACH_HANG" />
+        <AssociationConnector Association="DB_SPAModel.FK_CartItem_SAN_PHAM" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

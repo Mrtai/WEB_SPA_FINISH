@@ -74,15 +74,45 @@ namespace SpaWeb.User.Product
         protected void btn_datHang_Click(object sender, EventArgs e)
         {
             cartItemDAL cart = new cartItemDAL();
+            hoaDonDAL hdDAL = new hoaDonDAL();
+            sanPhamDAL spDAL = new sanPhamDAL();
+
+            chiTietHoaDonDAL cthdDAL = new chiTietHoaDonDAL();
+            CHI_TIET_HOA_DON cthd = new CHI_TIET_HOA_DON();
+            HOA_DON hd = new HOA_DON
+            {
+                MA_KH = 1
+            };
+
+            //hdDAL.Add(hd);
+
+            double tongTien = 0;
             int count = CartItemGridView.Rows.Count;
             if (count > 0)
             {
                 for (int i = 0; i < count; i++)
                 {
-                    int id = Convert.ToInt32(CartItemGridView.Rows[i].Cells[0].Text);
-                    cart.Delete(id);
+                    string a = CartItemGridView.Rows[i].Cells[3].Text;
+
+                    int idCart = Convert.ToInt32(CartItemGridView.Rows[i].Cells[0].Text);
+
+                    string tenSP = CartItemGridView.Rows[i].Cells[1].Text;
+                    
+                    cthd.MA_SP = spDAL.GetDVByTen(tenSP);
+                    
+
+                    //cthd.SO_LUONG = Convert.ToInt32(CartItemGridView.Rows[i].Cells[3].Text);
+                    cthd.THANH_TIEN = Convert.ToDouble(CartItemGridView.Rows[i].Cells[4].Text);
+
+                    tongTien = tongTien + cthd.THANH_TIEN.Value;
+
+                    cthdDAL.Add(cthd);
+                    cart.Delete(idCart);
                 }
+                hd.TONG_TIEN = tongTien;
+                hdDAL.Update(hd);
             }
+
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
