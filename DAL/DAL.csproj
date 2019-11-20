@@ -64,6 +64,7 @@
     <Compile Include="DAL\hoaDonDAL.cs" />
     <Compile Include="DAL\khachHangDAL.cs" />
     <Compile Include="DAL\lichHenDAL.cs" />
+    <Compile Include="DAL\loaiDichVuDAL.cs" />
     <Compile Include="DAL\nhanVienDAL.cs" />
     <Compile Include="DAL\sanPhamDAL.cs" />
     <Compile Include="DAL\taiKhoanDAL.cs" />

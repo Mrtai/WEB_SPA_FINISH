@@ -100,7 +100,7 @@
         }
 
         #myCarousel .nav {
-            background: #eee;
+           background: #f4524d;
         }
 
         .nav-justified > li > a {

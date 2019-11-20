@@ -100,7 +100,7 @@
                                   <p>Vui lòng điền thông tin của bạn để xác nhận cuộc hẹn</p>
                               
                               <div class="form-group">
-                                  <asp:TextBox  CssClass="form-control" ID="txt_name" runat="server" placeholder="Họ tên"></asp:TextBox>
+                                 <asp:TextBox  CssClass="form-control" ID="txt_name"  runat="server" placeholder="Họ tên"></asp:TextBox> 
                                   <asp:RequiredFieldValidator ControlToValidate="txt_name" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Họ tên không được bỏ trống"></asp:RequiredFieldValidator></div>
                                <div class="form-group">
                                    

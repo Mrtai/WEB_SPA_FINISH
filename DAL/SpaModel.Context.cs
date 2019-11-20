@@ -30,11 +30,14 @@ namespace DAL
         public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
-        public DbSet<LICH_HEN> LICH_HEN { get; set; }
         public DbSet<SAN_PHAM> SAN_PHAM { get; set; }
         public DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
+        public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
         public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
+
+        public DbSet<LICH_HEN> LICH_HEN { get; set; }
+
     }
 }
