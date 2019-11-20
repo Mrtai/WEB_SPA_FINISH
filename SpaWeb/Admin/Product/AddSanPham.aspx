@@ -11,7 +11,7 @@
     <link href="../../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../../Content/bootstrap.css" rel="stylesheet" />
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../../ckeditor/ckeditor.js"></script>
+    <script src="../../Scripts/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
