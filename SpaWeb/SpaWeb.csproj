@@ -117,7 +117,6 @@
     <Content Include="Admin\Product\AddSanPham.aspx" />
     <Content Include="Admin\Product\EditSamPham.aspx" />
     <Content Include="Admin\Product\SanPhamLoad.aspx" />
-
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\Home.aspx" />
     <Content Include="Admin\images\dashboard\circle.svg" />
@@ -271,6 +270,9 @@
     <Content Include="Admin\vendors\iconfonts\mdi\scss\_path.scss" />
     <Content Include="Admin\vendors\iconfonts\mdi\scss\_variables.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Resource\image\46422807_158238241801009_4473444271143256064_n.jpg" />
+    <Content Include="Resource\image\46438335_158564828435017_2338780009600122880_n.jpg" />
+    <Content Include="Resource\image\O.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -460,7 +462,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resource\image\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
