@@ -34,5 +34,6 @@ namespace DAL
         public DbSet<SAN_PHAM> SAN_PHAM { get; set; }
         public DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
         public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
+        public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
     }
 }

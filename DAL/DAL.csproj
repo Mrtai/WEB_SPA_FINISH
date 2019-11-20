@@ -75,6 +75,9 @@
     <Compile Include="LICH_HEN.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LOAI_DICHVU.cs">
+      <DependentUpon>SpaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="NHAN_VIEN.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>

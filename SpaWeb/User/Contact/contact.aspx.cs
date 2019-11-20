@@ -12,7 +12,6 @@ namespace SpaWeb.User.Contact
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        bool flag = true;
         dichVuDAL dichVuService = new dichVuDAL();
         chiNhanhDAL chiNhanhService = new chiNhanhDAL();
         lichHenDAL lichHenService = new lichHenDAL();
@@ -24,6 +23,19 @@ namespace SpaWeb.User.Contact
                 LoadCB();
             }
             LoadDS();
+            if (Session["TEN_KH"] != null)
+            {
+                txt_name.Text = Session["TEN_KH"].ToString();
+               
+            }
+            if(Session["EMAIL"] != null)
+            {
+                txt_email.Text= Session["EMAIL"].ToString();
+            }
+            if (Session["PHONE"] != null)
+            {
+                txt_phone.Text = Session["PHONE"].ToString();
+            }
         }
 
         protected void btnNext_Click(object sender, EventArgs e)
@@ -103,7 +115,6 @@ namespace SpaWeb.User.Contact
             //    string namem_dv = ViewState["name_dich_vu"].ToString();
             //    lb_service.Text = namem_dv;
             //}
-            flag = false;
             ViewState["contact_load"] = true;
            
         }

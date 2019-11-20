@@ -23,7 +23,9 @@ namespace DAL
         public string TEN_DICH_VU { get; set; }
         public string CHI_TIET { get; set; }
         public Nullable<double> GIA { get; set; }
+        public Nullable<int> MALOAI { get; set; }
     
         public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
+        public virtual LOAI_DICHVU LOAI_DICHVU { get; set; }
     }
 }
