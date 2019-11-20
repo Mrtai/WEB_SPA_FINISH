@@ -18,6 +18,7 @@ namespace DAL
         {
             this.HOA_DON = new HashSet<HOA_DON>();
             this.TAI_KHOAN = new HashSet<TAI_KHOAN>();
+            this.CartItems = new HashSet<CartItem>();
             this.LICH_HEN = new HashSet<LICH_HEN>();
         }
     
@@ -28,6 +29,7 @@ namespace DAL
     
         public virtual ICollection<HOA_DON> HOA_DON { get; set; }
         public virtual ICollection<TAI_KHOAN> TAI_KHOAN { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
         public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
     }
 }

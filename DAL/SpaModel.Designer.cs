@@ -1,7 +1,10 @@
 
-﻿// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\projectdemo\WEB_SPA_FINISH\DAL\SpaModel.edmx'. 
+// T4 code generation is enabled for model 'E:\Hoc\visual\DoAnWinform\WEB_SPA_FINISH\DAL\SpaModel.edmx'. 
 
-﻿// T4 code generation is enabled for model 'E:\DA_WEB\WEB_FINISH\DAL\SpaModel.edmx'. 
+// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\projectdemo\WEB_SPA_FINISH\DAL\SpaModel.edmx'. 
+
+// T4 code generation is enabled for model 'E:\DA_WEB\WEB_FINISH\DAL\SpaModel.edmx'. 
+
 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model

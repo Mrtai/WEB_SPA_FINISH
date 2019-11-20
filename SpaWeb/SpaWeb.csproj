@@ -114,6 +114,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\Product\AddSanPham.aspx" />
+    <Content Include="Admin\Product\EditSamPham.aspx" />
+    <Content Include="Admin\Product\SanPhamLoad.aspx" />
+
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\Home.aspx" />
     <Content Include="Admin\images\dashboard\circle.svg" />
@@ -305,12 +309,36 @@
     <Content Include="User\Login\js\vendor.bundle.base.js" />
     <Content Include="User\Login\login.aspx" />
     <Content Include="User\Login\register.aspx" />
+    <Content Include="User\Product\GioHang.aspx" />
+    <Content Include="User\Product\SanPhamDetail.aspx" />
+    <Content Include="User\Product\SanPhamListLoad.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Product\AddSanPham.aspx.cs">
+      <DependentUpon>AddSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\AddSanPham.aspx.designer.cs">
+      <DependentUpon>AddSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\EditSamPham.aspx.cs">
+      <DependentUpon>EditSamPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\EditSamPham.aspx.designer.cs">
+      <DependentUpon>EditSamPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\SanPhamLoad.aspx.cs">
+      <DependentUpon>SanPhamLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\SanPhamLoad.aspx.designer.cs">
+      <DependentUpon>SanPhamLoad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -400,6 +428,27 @@
     </Compile>
     <Compile Include="User\Login\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Product\GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Product\GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Product\SanPhamDetail.aspx.cs">
+      <DependentUpon>SanPhamDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Product\SanPhamDetail.aspx.designer.cs">
+      <DependentUpon>SanPhamDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Product\SanPhamListLoad.aspx.cs">
+      <DependentUpon>SanPhamListLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Product\SanPhamListLoad.aspx.designer.cs">
+      <DependentUpon>SanPhamListLoad.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
