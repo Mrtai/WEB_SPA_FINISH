@@ -1,238 +1,372 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SpaWeb._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="container">
-        <div class="row" style="text-align: center; align-items: center">
-            <h2>Dịch vụ nổi bật</h2>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div style="align-items: center; margin-bottom: 10px" class="col-md-6">
-                    <ul class="nav nav-tabs row" style="width: 100%; padding: 0px">
-                        <li class="active col-sm-3 " style="margin: 0px"><a href="#home">Cơ bản</a></li>
-                        <li class="col-sm-3 " style="margin: 0px"><a href="#menu1">Chuyên Xâu</a></li>
-                        <li class="col-sm-3 " style="margin: 0px"><a href="#menu2">Combo DexTo </a></li>
-                        <li class="col-sm-3 " style="margin: 0px"><a href="#menu3">Body</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3"></div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <div class="row" style="height: 500px; padding: 0px">
-
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                            <img width=100% height=100% src="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg" 
-                                class="attachment-full size-full wp-post-image" alt="Dịch Vụ Trị Mụn Chuyên Sâu"
-                                 srcset="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg 625w, 
-                                https://gaspa.vn/wp-content/uploads/2019/05/MUN-500x333.jpg 500w,
-                                 https://gaspa.vn/wp-content/uploads/2019/05/MUN-300x200.jpg 300w" 
-                                sizes="(max-width: 625px) 100vw, 625px">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                            <div class="details" style="background-color:#1f3754">	
-                                	<h4><a href="https://gaspa.vn/dt_spa_procedure/dich-vu-dieu-tri-mun/">Dịch Vụ Trị Mụn Chuyên Sâu</a></h4>
-                                <ul class="agenda"> <li></li> </ul>		<div class="price-meta-data">
-                                    <p>Gà Spa&nbsp;tự tin khẳng định là thương hiệu spa điều trị mụn hàng đầu, đầu tư và&nbsp;cải tiến hơn nữa chất lượng dịch vụ,
-                                         không gian và thiết bị cho khách hàng thân yêu. Gà Spa chuyên điều trị tất cả các loại mụn cám, mụn mủ, mụn bọc, mụn đầu đen. 
-                                        Với dịch vụ […]</p><div class="price"><span class="currency">$</span></div>
-                                <div class="button"><a href="https://gaspa.vn/dt_spa_procedure/dich-vu-dieu-tri-mun/">View Details</a></div>		</div>	</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                   
-
-                </div>
-            </div>
-            <div id="menu1" class="tab-pane fade">
-                <div class="row" style="height: 500px">
-
-                   <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                            <img width=100% height=100% src="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg" 
-                                class="attachment-full size-full wp-post-image" alt="Dịch Vụ Trị Mụn Chuyên Sâu"
-                                 srcset="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg 625w, 
-                                https://gaspa.vn/wp-content/uploads/2019/05/MUN-500x333.jpg 500w,
-                                 https://gaspa.vn/wp-content/uploads/2019/05/MUN-300x200.jpg 300w" 
-                                sizes="(max-width: 625px) 100vw, 625px">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="menu2" class="tab-pane fade">
-                <div class="row" style="height: 500px">
-
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                            <img width=100% height=100% src="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg" 
-                                class="attachment-full size-full wp-post-image" alt="Dịch Vụ Trị Mụn Chuyên Sâu"
-                                 srcset="https://gaspa.vn/wp-content/uploads/2019/05/MUN.jpg 625w, 
-                                https://gaspa.vn/wp-content/uploads/2019/05/MUN-500x333.jpg 500w,
-                                 https://gaspa.vn/wp-content/uploads/2019/05/MUN-300x200.jpg 300w" 
-                                sizes="(max-width: 625px) 100vw, 625px">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-                    <div class="col-sm-3  row item_magin" style="height: 100%; border: solid; border-width: 3px; background-color: aqua; padding: 0px">
-                        <div style="height: 60%; float: left; width: 100%; background-color: chocolate">
-                        </div>
-                        <div class="div_hover" style="background-color: #3647E1; float: left; margin: 0px; position: absolute; align-self: flex-end; bottom: 0">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div id="menu3" class="tab-pane fade">
-                <div class="row" style="height: 500px">
-
-                    <div class="col-sm-3 item_magin" style="height: 100%; border: solid; border-width: 3px">.col-sm-4</div>
-                    <div class="col-sm-3 item_magin" style="height: 100%; border: solid; border-width: 3px">.col-sm-4</div>
-                    <div class="col-sm-3 item_magin" style="height: 100%; border: solid; border-width: 3px">.col-sm-4</div>
-
-                </div>
-            </div>
-        </div>
-
-        //car
-        <div class="row">
-            <div class="col-md-12"><h2>Thay đổi làn da thay đổi cuộc sống</h2></div>
-            <div class="col-md-12" style="background-size: cover;
-    background-repeat: repeat;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url(https://gaspa.vn/wp-content/uploads/2019/05/background-Vy-min.png);
-    background-attachment: scroll;
-    min-width: 1519px;
-    left: -159.6px;
-    width: 1519px;height:600px">
-                <div class="col-md-4">
-
-                </div>
-                 <div class="col-md-4">
-                      <img src="./Scripts/bg.png" alt="Chania" width="100%" height="100%" style="margin:50px">
-                </div>
-                 <div class="col-md-4">
-
-                </div>
-            </div>
-        </div>
-
-        //cẻ
-  <div class="container">
-    <div class="row">
-		<div class="col-md-12">
-                <div id="Carousel" class="carousel slide">
-                 
-                <ol class="carousel-indicators">
-                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#Carousel" data-slide-to="1"></li>
-                    <li data-target="#Carousel" data-slide-to="2"></li>
-                </ol>
-                 
-                <!-- Carousel items -->
+ <div class="top1">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    
-                <div class="item active">
-                	<div class="row">
-                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	</div><!--.row-->
-                </div><!--.item-->
-                 
-                <div class="item">
-                	<div class="row">
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	</div><!--.row-->
-                </div><!--.item-->
-                 
-                <div class="item">
-                	<div class="row">
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                	</div><!--.row-->
-                </div><!--.item-->
-                 
-                </div><!--.carousel-inner-->
-                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                </div><!--.Carousel-->
-                 
-		</div>
-	</div>
-</div><!--.container-->
-       
-</div>
- 
-
-
-
+                    <div class="item active">
+                        <img src="http://placehold.it/1200x400/16a085/ffffff&text=About Us">
+                        <div class="carousel-caption">
+                            <h3>Headline</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Item -->
+                    <div class="item">
+                        <img src="http://placehold.it/1200x400/e67e22/ffffff&text=Projects">
+                        <div class="carousel-caption">
+                            <h3>Headline</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Item -->
+                    <div class="item">
+                        <img src="http://placehold.it/1200x400/2980b9/ffffff&text=Portfolio">
+                        <div class="carousel-caption">
+                            <h3>Headline</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Item -->
+                    <div class="item">
+                        <img src="http://placehold.it/1200x400/8e44ad/ffffff&text=Services">
+                        <div class="carousel-caption">
+                            <h3>Headline</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Item -->
+                </div>
+                <!-- End Carousel Inner -->
+                <ul class="nav nav-pills nav-justified">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
+                ipsum dolor sit</small></a></li>
+                    <li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum
+                dolor sit</small></a></li>
+                    <li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum
+                dolor sit</small></a></li>
+                    <li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum
+                dolor sit</small></a></li>
+                </ul>
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </div>
     <script>
         $(document).ready(function () {
-            $(".nav-tabs a").click(function () {
-                $(this).tab('show');
+            $('#myCarousel').carousel({
+                interval: 1000
+            });
+
+            var clickEvent = false;
+            $('#myCarousel').on('click', '.nav a', function () {
+                clickEvent = true;
+                $('.nav li').removeClass('active');
+                $(this).parent().addClass('active');
+            }).on('slid.bs.carousel', function (e) {
+                if (!clickEvent) {
+                    var count = $('.nav').children().length - 1;
+                    var current = $('.nav li.active');
+                    current.removeClass('active').next().addClass('active');
+                    var id = parseInt(current.data('slide-to'));
+                    if (count == id) {
+                        $('.nav li').first().addClass('active');
+                    }
+                }
+                clickEvent = false;
             });
         });
-
-        $(document).ready(function () {
-            $('#Carousel').carousel({
-                interval: 2000
-            })
-        });
-       
-
-
     </script>
+    <%-- //endtop1--%>
+
+    <!-- Tabs -->
+    <h1>Responsive CSS Tabs</h1>
+    <div class="tab_container">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1"><i class="fa fa-code"></i><span>Code</span></label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2"><i class="fa fa-pencil-square-o"></i><span>About</span></label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Services</span></label>
+
+
+
+        <section id="content1" class="tab-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section id="content2" class="tab-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section id="content3" class="tab-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+
+    </div>
+    <!-- ./Tabs -->
+    <div class="row" style="height: 500px; background-color: aqua; width: 100%; margin: 0px; padding-top: 100px">
+        <div class="row" style="height: 300px; margin-top: 100px; width: 100%; margin: 0px">
+            <div class="col-md-4" style="height: 300px; background-color: azure">
+                <asp:Repeater ID="Repeater1" runat="server">
+
+                </asp:Repeater>
+            </div>
+            <div class="col-md-8" style="height: 300px; background-color: chocolate">
+            </div>
+
+        </div>
+
+    </div>
+    <%--   //tab--%>
+    <div class="container">
+        <h1>Use Bootstrap 3's carousel to show multiple items per slide.</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel slide multi-item-carousel" id="theCarousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?perth,australia" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?fremantle,australia" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?west-australia" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?perth" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?quokka,perth" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?margaretriver,australia" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <!-- add  more items here -->
+                        <!-- Example item start:  -->
+
+                        <div class="item">
+                            <div class="col-xs-4">
+                                <a href="#1">
+                                    <img src="https://source.unsplash.com/300x300/?perth,australia&r=7" class="img-responsive"></a>
+                            </div>
+                        </div>
+
+                        <!--  Example item end -->
+                    </div>
+                    <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                    <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.multi-item-carousel').carousel({
+            interval: false
+        });
+
+        // for every slide in carousel, copy the next slide's item in the slide.
+        // Do the same for the next, next item.
+        $('.multi-item-carousel .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            if (next.next().length > 0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+            } else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+    <%-- //end carosel--%>
+    <div class="container">
+        <div class="row">
+            <div id="sp-component" class="col-sm-12 col-md-12">
+                <div class="sp-column ">
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="documentation-index">
+                            <a href="/documentation/sp-page-builder/sp-page-builder-2-x">
+                                <img src="//www.joomshaper.com/images/2017/01/27/page-builder.png" alt="SP Page Builder">
+                            </a>
+                            <h2>SP Page Builder</h2>
+                            <div class="documentation-shortdesc">
+                                The complete knowledge base and best crafted guide to SP Page Builder you will ever need.
+                            </div>
+                            <a class="btn btn-doc-outline" href="/documentation/sp-page-builder/sp-page-builder-2-x">View Documentation</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="documentation-index">
+                            <a href="/documentation/joomla-templates/rhino">
+                                <img src="//www.joomshaper.com/images/2017/01/27/template.png" alt="Joomla Templates">
+                            </a>
+                            <h2>Joomla Templates</h2>
+                            <div class="documentation-shortdesc">
+                                Explore our extensive resources to get an in-depth understanding on our Joomla templates.
+                            </div>
+                            <a class="btn btn-doc-outline" href="/documentation/joomla-templates/rhino">View Documentation</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="documentation-index">
+                            <a href="/documentation/joomla-extensions/sp-easyimagegallery">
+                                <img src="//www.joomshaper.com/images/2017/01/27/extensions.png" alt="Joomla Extensions">
+                            </a>
+                            <h2>Joomla Extensions</h2>
+                            <div class="documentation-shortdesc">
+                                Learn ins and outs of our powerful, innovative and world wide used extensions for Joomla.
+                            </div>
+                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">View Documentation</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </asp:Content>
