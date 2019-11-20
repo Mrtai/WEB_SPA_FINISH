@@ -74,6 +74,7 @@ namespace SpaWeb.User.Contact
         {
             var listCN = chiNhanhService.GetList();
             DSchinhan.DataSource = listCN;
+            DSchinhan.DataBind();
         }
         private void LoadCB()
         {

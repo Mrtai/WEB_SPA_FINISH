@@ -304,6 +304,7 @@
     <Content Include="Site.Master" />
     <Content Include="User\Contact\contact.aspx" />
     <Content Include="User\Login\css\materialdesignicons.min.css" />
+    <Content Include="User\Login\css\style.css" />
     <Content Include="User\Login\css\vendor.bundle.base.css" />
     <Content Include="User\Login\js\misc.js" />
     <Content Include="User\Login\js\off-canvas.js" />
@@ -461,6 +462,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Staff\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
