@@ -100,7 +100,7 @@
         }
 
         #myCarousel .nav {
-            background: #eee;
+           background: #f4524d;
         }
 
         .nav-justified > li > a {
@@ -270,7 +270,7 @@ a {
 	position: relative;
 }
 
-input, section {
+ section {
   clear: both;
   padding-top: 10px;
   display: none;

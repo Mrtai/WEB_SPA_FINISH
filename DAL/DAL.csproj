@@ -60,6 +60,7 @@
     <Compile Include="DAL\hoaDonDAL.cs" />
     <Compile Include="DAL\khachHangDAL.cs" />
     <Compile Include="DAL\lichHenDAL.cs" />
+    <Compile Include="DAL\loaiDichVuDAL.cs" />
     <Compile Include="DAL\nhanVienDAL.cs" />
     <Compile Include="DAL\sanPhamDAL.cs" />
     <Compile Include="DAL\taiKhoanDAL.cs" />
@@ -73,6 +74,9 @@
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LICH_HEN.cs">
+      <DependentUpon>SpaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAI_DICHVU.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NHAN_VIEN.cs">

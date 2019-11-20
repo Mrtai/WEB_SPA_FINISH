@@ -51,5 +51,11 @@ namespace DAL.DAL
             result = context.DICH_VU.FirstOrDefault(m => m.MA_DV == pMa);
             return result;
         }
+        public List<DICH_VU> GetDVByMaLoai(int pMa)
+        {
+            List<DICH_VU> list = new List<DICH_VU>();
+            list = context.DICH_VU.Where(m=> m.MALOAI == pMa).ToList();
+            return list;
+        }
     }
 }

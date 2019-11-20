@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SpaWeb._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
- <div class="top1">
+    <div class="top1">
         <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="http://placehold.it/1200x400/16a085/ffffff&text=About Us">
+                        <img src="https://viectotnhat.com/bi-quyet-nghe-nghiep/wp-content/uploads/2017/07/gap-go-ceo-trung-tam-spa-cho-tre-so-sinh-dau-tien-o-viet-nam-hinh-anh-1.jpg" width="100%" style="height:500px">
                         <div class="carousel-caption">
-                            <h3>Headline</h3>
+                            <h3>Nâng niu và chăm sóc làn da</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
@@ -19,9 +19,9 @@
                     </div>
                     <!-- End Item -->
                     <div class="item">
-                        <img src="http://placehold.it/1200x400/e67e22/ffffff&text=Projects">
+                        <img src="https://maihanspa.com/ino_upload/source/Tin%20t%E1%BB%A9c/Beauty%20Spa/3.png" width="100%" style="height:500px">
                         <div class="carousel-caption">
-                            <h3>Headline</h3>
+                            <h3>Thăm khám và soi da hoàn toàn miễn phí</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
@@ -31,9 +31,9 @@
                     </div>
                     <!-- End Item -->
                     <div class="item">
-                        <img src="http://placehold.it/1200x400/2980b9/ffffff&text=Portfolio">
+                        <img src="http://thietbithammythanhvan.com/wp-content/uploads/2019/09/tu-van-mo-spa-cham-soc-da.jpg" width="100%" style="height:500px">
                         <div class="carousel-caption">
-                            <h3>Headline</h3>
+                            <h3>Đội ngũ kỹ thuật viên giàu kinh nghiệm</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
@@ -43,9 +43,9 @@
                     </div>
                     <!-- End Item -->
                     <div class="item">
-                        <img src="http://placehold.it/1200x400/8e44ad/ffffff&text=Services">
+                        <img src="https://image.thanhnien.vn/660/uploaded/quochung.qc/2019_04_20/mh6/1_lbsw.png" width="100%" style="height:500px">
                         <div class="carousel-caption">
-                            <h3>Headline</h3>
+                            <h3>Trang thiết bị hiện đại</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
@@ -100,125 +100,39 @@
     <!-- Tabs -->
     <h1>Responsive CSS Tabs</h1>
     <div class="tab_container">
-        <input id="tab1" type="radio" name="tabs" checked>
-        <label for="tab1"><i class="fa fa-code"></i><span>Code</span></label>
-
-        <input id="tab2" type="radio" name="tabs">
-        <label for="tab2"><i class="fa fa-pencil-square-o"></i><span>About</span></label>
-
-        <input id="tab3" type="radio" name="tabs">
-        <label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Services</span></label>
-
-
-
-        <section id="content1" class="tab-content">
+       <asp:Repeater ID="Repeater2" runat="server">
+            <ItemTemplate>
+                 <input id="tab<%# Container.ItemIndex +1 %>" type="radio" name="tabs" checked>
+                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>
+                    
+            </ItemTemplate>
+           
+        </asp:Repeater>
+        <asp:Repeater ID="Repeater3" runat="server" OnItemDataBound="Repeater3_ItemDataBound">
+            <ItemTemplate>
+                <section id="content<%# Container.ItemIndex +1 %>" class="tab-content">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                <asp:Repeater ID="Repeater4" runat="server">
+                    <ItemTemplate>
+                         <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                                <div class="card-body">
+                                    <h2> <%# Eval("TEN_DICH_VU")%></h2>
+                                    <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
             <hr>
         </section>
-
-        <section id="content2" class="tab-content">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </section>
-
-        <section id="content3" class="tab-content">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </section>
-
+            </ItemTemplate>
+        </asp:Repeater>
+        
 
     </div>
     <!-- ./Tabs -->

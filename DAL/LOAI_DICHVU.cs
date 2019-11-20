@@ -12,20 +12,17 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class DICH_VU
+    public partial class LOAI_DICHVU
     {
-        public DICH_VU()
+        public LOAI_DICHVU()
         {
-            this.LICH_HEN = new HashSet<LICH_HEN>();
+            this.DICH_VU = new HashSet<DICH_VU>();
         }
     
-        public int MA_DV { get; set; }
-        public string TEN_DICH_VU { get; set; }
-        public string CHI_TIET { get; set; }
-        public Nullable<double> GIA { get; set; }
-        public Nullable<int> MALOAI { get; set; }
+        public int MAlLOAI { get; set; }
+        public string TEN_LOAI { get; set; }
+        public Nullable<int> STATUS { get; set; }
     
-        public virtual LOAI_DICHVU LOAI_DICHVU { get; set; }
-        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
+        public virtual ICollection<DICH_VU> DICH_VU { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace DAL
         public KHACH_HANG()
         {
             this.HOA_DON = new HashSet<HOA_DON>();
-            this.LICH_HEN = new HashSet<LICH_HEN>();
             this.TAI_KHOAN = new HashSet<TAI_KHOAN>();
+            this.LICH_HEN = new HashSet<LICH_HEN>();
         }
     
         public int MA_KH { get; set; }
@@ -27,7 +27,7 @@ namespace DAL
         public string PHONE { get; set; }
     
         public virtual ICollection<HOA_DON> HOA_DON { get; set; }
-        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
         public virtual ICollection<TAI_KHOAN> TAI_KHOAN { get; set; }
+        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
     }
 }
