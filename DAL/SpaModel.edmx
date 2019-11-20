@@ -57,7 +57,7 @@
             <PropertyRef Name="MA_KH" />
           </Key>
           <Property Name="MA_KH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TEN_KH" Type="varchar" MaxLength="50" />
+          <Property Name="TEN_KH" Type="nvarchar" MaxLength="50" />
           <Property Name="EMAIL" Type="varchar" MaxLength="100" />
           <Property Name="PHONE" Type="varchar" MaxLength="20" />
         </EntityType>
@@ -98,7 +98,7 @@
             <PropertyRef Name="MA_SP" />
           </Key>
           <Property Name="MA_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TEN_SP" Type="varchar" MaxLength="50" />
+          <Property Name="TEN_SP" Type="nvarchar" MaxLength="50" />
           <Property Name="MO_TA" Type="text" />
           <Property Name="ANH" Type="varchar" MaxLength="100" />
           <Property Name="GIA" Type="float" />
@@ -339,7 +339,7 @@
             <PropertyRef Name="MA_KH" />
           </Key>
           <Property Name="MA_KH" Type="Int32" Nullable="false" />
-          <Property Name="TEN_KH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEN_KH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="HOA_DON" Relationship="Self.FK_HOA_DON_THANH_TOA_KHACH_HA" FromRole="KHACH_HANG" ToRole="HOA_DON" />
@@ -368,7 +368,7 @@
             <PropertyRef Name="MA_SP" />
           </Key>
           <Property Name="MA_SP" Type="Int32" Nullable="false" />
-          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="GIA" Type="Double" />
