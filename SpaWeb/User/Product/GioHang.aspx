@@ -21,7 +21,7 @@
                     <asp:BoundField DataField="CartID" HeaderText="ID" SortExpression="CartID"/>
                     <asp:BoundField DataField="SAN_PHAM.TEN_SP" HeaderText="Tên Sản Phẩm" />
                     <asp:BoundField DataField="SAN_PHAM.GIA" HeaderText="Giá" />
-                   <asp:TemplateField  HeaderText="Thành Tiền">            
+                   <asp:TemplateField  HeaderText="Số Lượng">            
                          <ItemTemplate>
                             <asp:TextBox runat="server" Text="<%#: Item.SoLuong %>" Width="50px" TextMode="Number" ID="txt_SoLuong"></asp:TextBox>
                         </ItemTemplate>
