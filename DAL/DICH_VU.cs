@@ -26,6 +26,5 @@ namespace DAL
         public Nullable<int> MALOAI { get; set; }
     
         public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
-        public virtual LOAI_DICHVU LOAI_DICHVU { get; set; }
     }
 }

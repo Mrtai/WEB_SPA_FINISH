@@ -36,5 +36,6 @@ namespace DAL
         public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
         public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+
     }
 }
