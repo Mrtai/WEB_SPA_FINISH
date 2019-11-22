@@ -114,10 +114,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\AddNhanVien.aspx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\DanhSachDatLich.aspx" />
+    <Content Include="Admin\DanhSachKhachHang.aspx" />
+    <Content Include="Admin\DanhSachNhanVien.aspx" />
+    <Content Include="Admin\EditNhanVien.aspx" />
+    <Content Include="Admin\KetQuaDatLich.aspx" />
     <Content Include="Admin\DetailBill.aspx" />
     <Content Include="Admin\ListBill.aspx" />
     <Content Include="Admin\AddSanPham.aspx" />
     <Content Include="Admin\EditSamPham.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\SanPhamLoad.aspx" />
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\Home.aspx" />
@@ -287,6 +295,9 @@
     <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\ckeditor\skins\moono-lisa\readme.md" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Resource\image\46422807_158238241801009_4473444271143256064_n.jpg" />
+    <Content Include="Resource\image\46438335_158564828435017_2338780009600122880_n.jpg" />
+    <Content Include="Resource\image\O.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
@@ -638,6 +649,7 @@
     <Content Include="Site.Master" />
     <Content Include="User\Contact\contact.aspx" />
     <Content Include="User\Login\css\materialdesignicons.min.css" />
+    <Content Include="User\Login\css\style.css" />
     <Content Include="User\Login\css\vendor.bundle.base.css" />
     <Content Include="User\Login\js\misc.js" />
     <Content Include="User\Login\js\off-canvas.js" />
@@ -656,6 +668,55 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddNhanVien.aspx.cs">
+      <DependentUpon>AddNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddNhanVien.aspx.designer.cs">
+      <DependentUpon>AddNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachDatLich.aspx.cs">
+      <DependentUpon>DanhSachDatLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachDatLich.aspx.designer.cs">
+      <DependentUpon>DanhSachDatLich.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachKhachHang.aspx.cs">
+      <DependentUpon>DanhSachKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachKhachHang.aspx.designer.cs">
+      <DependentUpon>DanhSachKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachNhanVien.aspx.cs">
+      <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachNhanVien.aspx.designer.cs">
+      <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditNhanVien.aspx.cs">
+      <DependentUpon>EditNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditNhanVien.aspx.designer.cs">
+      <DependentUpon>EditNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KetQuaDatLich.aspx.cs">
+      <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KetQuaDatLich.aspx.designer.cs">
+      <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\DetailBill.aspx.cs">
       <DependentUpon>DetailBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -683,6 +744,13 @@
     </Compile>
     <Compile Include="Admin\EditSamPham.aspx.designer.cs">
       <DependentUpon>EditSamPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SanPhamLoad.aspx.cs">
       <DependentUpon>SanPhamLoad.aspx</DependentUpon>
@@ -812,7 +880,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resource\image\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

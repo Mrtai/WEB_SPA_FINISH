@@ -15,10 +15,11 @@ namespace SpaWeb.User.Contact
         dichVuDAL dichVuService = new dichVuDAL();
         chiNhanhDAL chiNhanhService = new chiNhanhDAL();
         lichHenDAL lichHenService = new lichHenDAL();
+        khachHangDAL khachHanService = new khachHangDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 0;
-            if (ViewState["contact_load"] == null )
+            if (ViewState["contact_load"] == null || Convert.ToBoolean(ViewState["contact_load"]) == false)
             {
                 LoadCB();
             }
@@ -74,6 +75,7 @@ namespace SpaWeb.User.Contact
         {
             var listCN = chiNhanhService.GetList();
             DSchinhan.DataSource = listCN;
+            DSchinhan.DataBind();
         }
         private void LoadCB()
         {
@@ -96,25 +98,6 @@ namespace SpaWeb.User.Contact
             dr_chinhanh.DataSource = listCN;
             dr_chinhanh.DataBind();
             
-
-
-            //if (ViewState["id_chi_nhanh"] != null)
-            //{
-            //    string chinhanhChecked = ViewState["id_chi_nhanh"].ToString();
-            //    dr_chinhanh.ClearSelection();
-            //    dr_chinhanh.Items.FindByValue(chinhanhChecked).Selected = true;
-            //}
-            //DSchinhan.DataBind();
-            //if (ViewState["name_chi_nhanh"] != null)
-            //{
-            //    string name_cn = ViewState["name_chi_nhanh"].ToString();
-            //    lb_chinhanh.Text = name_cn;
-            //}
-            //if(ViewState["name_dich_vu"] != null)
-            //{
-            //    string namem_dv = ViewState["name_dich_vu"].ToString();
-            //    lb_service.Text = namem_dv;
-            //}
             ViewState["contact_load"] = true;
            
         }
@@ -246,16 +229,43 @@ namespace SpaWeb.User.Contact
             lh.GIO = gio;
             lh.NGAY = dt;
             lh.NOTE = note;
-            if(lichHenService.Add(lh) == 1)
+            if (Session["MA_KH"] != null)
             {
-                lb_result.Text = "Bạn đã đặt lịch thành công";
-                lb_result.Visible = true;
+                lh.MA_KH =Convert.ToInt32(Session["MA_KH"]);
+                if (lichHenService.Add(lh) == 1)
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Đặt lịch thành công')", true);
+                }
+                else
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Đặt lịch không thành công')", true);
+                }
             }
             else
             {
-                lb_result.Text = "Bạn đã đặt lịch không thành công";
-                lb_result.Visible = true;
+                KHACH_HANG kh = new KHACH_HANG();
+                kh.TEN_KH = txt_name.Text;
+                kh.EMAIL = txt_email.Text;
+                kh.PHONE = txt_phone.Text;
+                if (khachHanService.Add(kh)== 1){
+                    lh.MA_KH = kh.MA_KH;
+                    if (lichHenService.Add(lh) == 1)
+                    {
+                        Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Đặt lịch thành công')", true);
+                    }
+                    else
+                    {
+                        Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Đặt lịch không thành công')", true);
+                    }
+                }
+                else
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Đặt lịch không thành công')", true);
+                }
+                
             }
+           
+            ViewState["contact_load"] = false;
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)

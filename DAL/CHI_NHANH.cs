@@ -17,6 +17,7 @@ namespace DAL
         public CHI_NHANH()
         {
             this.LICH_HEN = new HashSet<LICH_HEN>();
+            this.NHAN_VIEN = new HashSet<NHAN_VIEN>();
         }
     
         public int MA_CN { get; set; }
@@ -25,5 +26,6 @@ namespace DAL
         public string PHONE { get; set; }
     
         public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
+        public virtual ICollection<NHAN_VIEN> NHAN_VIEN { get; set; }
     }
 }
