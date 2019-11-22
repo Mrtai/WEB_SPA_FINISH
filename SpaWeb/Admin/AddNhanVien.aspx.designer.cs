@@ -10,132 +10,150 @@
 namespace SpaWeb.Admin {
     
     
-    public partial class AdminMaster {
+    public partial class AddNhanVien {
         
         /// <summary>
-        /// head control.
+        /// lb_messenger control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lb_messenger;
         
         /// <summary>
-        /// form1 control.
+        /// la control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label la;
         
         /// <summary>
-        /// lb_name control.
+        /// txt_tenNV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_name;
+        protected global::System.Web.UI.WebControls.TextBox txt_tenNV;
         
         /// <summary>
-        /// btn_logout control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_logout;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// link_change control.
+        /// txt_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_change;
+        protected global::System.Web.UI.WebControls.TextBox txt_email;
         
         /// <summary>
-        /// lb_name_2 control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_name_2;
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// lb_quyen control.
+        /// txt_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_quyen;
+        protected global::System.Web.UI.WebControls.TextBox txt_username;
         
         /// <summary>
-        /// link_hd control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_hd;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// link_sp control.
+        /// dr_chinhanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_sp;
+        protected global::System.Web.UI.WebControls.DropDownList dr_chinhanh;
         
         /// <summary>
-        /// link_dv control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_dv;
+        protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// link_datlich control.
+        /// dr_quyen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_datlich;
+        protected global::System.Web.UI.WebControls.DropDownList dr_quyen;
         
         /// <summary>
-        /// link_kh control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_kh;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// link_nv control.
+        /// rb_active control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_nv;
+        protected global::System.Web.UI.WebControls.RadioButton rb_active;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// rb_lock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.RadioButton rb_lock;
+        
+        /// <summary>
+        /// btn_Save control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Save;
+        
+        /// <summary>
+        /// btn_Reset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Reset;
     }
 }

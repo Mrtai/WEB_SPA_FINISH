@@ -48,19 +48,14 @@
                 <span class="availability-status online"></span>             
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black">
+                    <asp:Label ID="lb_name" runat="server" Text="Label"></asp:Label></p>
               </div>
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#">
-                <i class="mdi mdi-cached mr-2 text-success"></i>
-                Activity Log
-              </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <i class="mdi mdi-logout mr-2 text-primary"></i>
-                Signout
-              </a>
+                <asp:LinkButton CssClass="dropdown-item" ID="btn_logout" runat="server" OnClick="btn_logout_Click"><i class="mdi mdi-logout mr-2 text-primary"></i> Signout</asp:LinkButton>
+                <asp:HyperLink CssClass="dropdown-item" ID="link_change" NavigateUrl="~/Admin/ChangePassword.aspx" runat="server"><i class="mdi mdi-account-key text-primary"></i> Change Password</asp:HyperLink>
             </div>
           </li>
           <li class="nav-item d-none d-lg-block full-screen-link">
@@ -97,8 +92,10 @@
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
-                <span class="font-weight-bold mb-2">David Grey. H</span>
-                <span class="text-secondary text-small">Project Manager</span>
+                <span class="font-weight-bold mb-2">
+                    <asp:Label ID="lb_name_2" runat="server" Text="Label"></asp:Label></span>
+                <span class="text-secondary text-small">
+                    <asp:Label ID="lb_quyen" runat="server" Text="Label"></asp:Label></span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -110,40 +107,42 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ListBill.aspx">
-              <span class="menu-title">Bill</span>
-              <i class="mdi mdi-contacts menu-icon"></i>
-            </a>
+              <asp:HyperLink CssClass="nav-link" ID="link_hd" Visible="false" NavigateUrl="~/Admin/ListBill.aspx" runat="server">
+                  <span class="menu-title">Hóa đơn </span>
+                  <i class="mdi mdi-contacts menu-icon"></i>
+              </asp:HyperLink>
+           
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="SanPhamLoad.aspx">
-              <span class="menu-title">Product</span>
-              <i class="mdi mdi-contacts menu-icon"></i>
-            </a>
+              <asp:HyperLink CssClass="nav-link" ID="link_sp" Visible="false" NavigateUrl="~/Admin/SanPhamLoad.aspx" runat="server">
+                  <span class="menu-title">Sản phẩm </span>
+                  <i class="mdi mdi-contacts menu-icon"></i>
+              </asp:HyperLink>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/forms/basic_elements.html">
-              <span class="menu-title">Dịch vụ</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-            </a>
+              <asp:HyperLink CssClass="nav-link" ID="link_dv" Visible="false" NavigateUrl="#" runat="server">
+                  <span class="menu-title">Dịch vụ</span>
+                  <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              </asp:HyperLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/charts/chartjs.html">
+             <asp:HyperLink CssClass="nav-link" ID="link_datlich" Visible="false" NavigateUrl="~/Admin/DanhSachDatLich.aspx" runat="server">
               <span class="menu-title">Đặt lịch</span>
               <i class="mdi mdi-chart-bar menu-icon"></i>
-            </a>
+            </asp:HyperLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/tables/basic-table.html">
+            <asp:HyperLink CssClass="nav-link" ID="link_kh" Visible="false" NavigateUrl="~/Admin/DanhSachKhachHang.aspx" runat="server">
               <span class="menu-title">Khách hàng</span>
               <i class="mdi mdi-table-large menu-icon"></i>
-            </a>
+            </asp:HyperLink>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="../../pages/tables/basic-table.html">
+            <asp:HyperLink CssClass="nav-link" ID="link_nv" Visible="false" NavigateUrl="~/Admin/DanhSachNhanVien.aspx" runat="server">
               <span class="menu-title">Nhân viên</span>
               <i class="mdi mdi-table-large menu-icon"></i>
-            </a>
+            </asp:HyperLink>
          </li>
         </ul>
       </nav>

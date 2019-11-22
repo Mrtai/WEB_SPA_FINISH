@@ -16,8 +16,9 @@
         </section>
         <div class="container">
             
-            <asp:Label ID="lb_result" CssClass="text-danger" runat="server" Text="Label" Visible="false"></asp:Label>
+           
             <div class="row">
+                 <asp:Label ID="lb_result" CssClass="text-danger" runat="server" Text="Label" Visible="false"></asp:Label>
                 <div class="col-lg-4">
                     <asp:MultiView ID="MultiView1" runat="server">
                          <asp:View ID="viewStep1" runat="server">
@@ -67,7 +68,7 @@
                                          <asp:RadioButton ID="opt8" GroupName="gio" runat="server" Text="11:30 Sáng" /><br />
                                      </div>
                                      <div class="col-lg-4 form-group">
-                                         <asp:RadioButton ID="opt9" GroupName="gio" runat="server" Text="12:30 Chiều" />
+                                         <asp:RadioButton style="margin-left: -2px;" ID="opt9" GroupName="gio" runat="server" Text="12:00 Chiều" />
                                          <asp:RadioButton ID="opt10" GroupName="gio" runat="server" Text="1:00 Chiều" />
                                          <asp:RadioButton ID="opt11" GroupName="gio" runat="server" Text="1:30 Chiều" />
                                          <asp:RadioButton ID="opt12" GroupName="gio" runat="server" Text="2:00 Chiều" />

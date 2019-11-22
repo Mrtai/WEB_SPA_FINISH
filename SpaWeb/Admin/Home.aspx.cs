@@ -11,7 +11,10 @@ namespace SpaWeb.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["MA_NV"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

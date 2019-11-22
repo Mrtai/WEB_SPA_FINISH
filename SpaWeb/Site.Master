@@ -15,11 +15,10 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="./fonts/js_composer.min.css" rel="stylesheet" />
-    <link href="./fonts/wiget.css" rel="stylesheet" />
      <link href="~/Content/layout.css" rel="stylesheet" />
      <link href="~/Content/style.css" rel="stylesheet" />
      <link href="~/Content/gird.css" rel="stylesheet" />
-     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    
 
     
     <style>
@@ -270,14 +269,14 @@ a {
 	position: relative;
 }
 
-input, section {
+ section {
   clear: both;
   padding-top: 10px;
   display: none;
 }
 
 label {
-  font-weight: 700;
+  /*font-weight: 700;
   font-size: 18px;
   display: block;
   float: left;
@@ -287,7 +286,7 @@ label {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  background: #f0f0f0;
+  background: #f0f0f0;*/
 }
 
 #tab1:checked ~ #content1,
@@ -458,6 +457,7 @@ label .fa {
         a, a:focus, a:hover {
             text-decoration: none;
         }
+        
     </style>
 
 </head>

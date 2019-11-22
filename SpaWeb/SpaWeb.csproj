@@ -114,9 +114,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\AddNhanVien.aspx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\DanhSachDatLich.aspx" />
+    <Content Include="Admin\DanhSachKhachHang.aspx" />
+    <Content Include="Admin\DanhSachNhanVien.aspx" />
+    <Content Include="Admin\EditNhanVien.aspx" />
+    <Content Include="Admin\KetQuaDatLich.aspx" />
     <Content Include="Admin\ListBill.aspx" />
     <Content Include="Admin\AddSanPham.aspx" />
     <Content Include="Admin\EditSamPham.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\SanPhamLoad.aspx" />
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\Home.aspx" />
@@ -659,6 +667,55 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddNhanVien.aspx.cs">
+      <DependentUpon>AddNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddNhanVien.aspx.designer.cs">
+      <DependentUpon>AddNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachDatLich.aspx.cs">
+      <DependentUpon>DanhSachDatLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachDatLich.aspx.designer.cs">
+      <DependentUpon>DanhSachDatLich.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachKhachHang.aspx.cs">
+      <DependentUpon>DanhSachKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachKhachHang.aspx.designer.cs">
+      <DependentUpon>DanhSachKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhSachNhanVien.aspx.cs">
+      <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhSachNhanVien.aspx.designer.cs">
+      <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditNhanVien.aspx.cs">
+      <DependentUpon>EditNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditNhanVien.aspx.designer.cs">
+      <DependentUpon>EditNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KetQuaDatLich.aspx.cs">
+      <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KetQuaDatLich.aspx.designer.cs">
+      <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListBill.aspx.cs">
       <DependentUpon>ListBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -679,6 +736,13 @@
     </Compile>
     <Compile Include="Admin\EditSamPham.aspx.designer.cs">
       <DependentUpon>EditSamPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SanPhamLoad.aspx.cs">
       <DependentUpon>SanPhamLoad.aspx</DependentUpon>
@@ -807,7 +871,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Staff\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
