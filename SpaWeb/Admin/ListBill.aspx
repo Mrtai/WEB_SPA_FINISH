@@ -36,7 +36,7 @@
 
                             <asp:TemplateField HeaderText="Chức Năng" HeaderStyle-CssClass="h4 text-center">
                                 <ItemTemplate>
-                                   <a href="#" class="btn btn-google" style="padding:10px">Xác Nhận</a>
+                                   <asp:Button class="btn btn-google" style="padding:10px" runat ="server" ID="btn_XacNhan" OnClick="btn_XacNhan_Click" Text="Xác Nhận"/>
                                    <a href="DetailBill.aspx?MaHD=<%# Eval("MA_HD") %>" class="btn btn-facebook" style="padding:10px">Chi Tiết</a>
                                     <a href="SanPhamLoad.aspx"> 
                                    <asp:LinkButton CssClass="btn btn-danger" style="padding:10px" runat ="server" Text="Xóa" 
