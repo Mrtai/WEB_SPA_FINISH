@@ -668,7 +668,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Admin\AddNhanVien.aspx.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -717,14 +716,13 @@
     </Compile>
     <Compile Include="Admin\KetQuaDatLich.aspx.designer.cs">
       <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Admin\DetailBill.aspx.cs">
       <DependentUpon>DetailBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\DetailBill.aspx.designer.cs">
       <DependentUpon>DetailBill.aspx</DependentUpon>
->>>>>>> origin/dev_son
     </Compile>
     <Compile Include="Admin\ListBill.aspx.cs">
       <DependentUpon>ListBill.aspx</DependentUpon>
