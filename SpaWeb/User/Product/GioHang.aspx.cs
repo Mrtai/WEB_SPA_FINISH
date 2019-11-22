@@ -78,13 +78,13 @@ namespace SpaWeb.User.Product
             sanPhamDAL spDAL = new sanPhamDAL();
 
             chiTietHoaDonDAL cthdDAL = new chiTietHoaDonDAL();
-            CHI_TIET_HOA_DON cthd = new CHI_TIET_HOA_DON();
+            
             HOA_DON hd = new HOA_DON
             {
                 MA_KH = 1
             };
 
-            //hdDAL.Add(hd);
+            hdDAL.Add(hd);
 
             double tongTien = 0;
             int count = CartItemGridView.Rows.Count;
@@ -92,21 +92,24 @@ namespace SpaWeb.User.Product
             {
                 for (int i = 0; i < count; i++)
                 {
-                    string a = CartItemGridView.Rows[i].Cells[3].Text;
-
-                    int idCart = Convert.ToInt32(CartItemGridView.Rows[i].Cells[0].Text);
-
+                    CHI_TIET_HOA_DON cthd = new CHI_TIET_HOA_DON();
+                    int idCart = Convert.ToInt32(CartItemGridView.Rows[i].Cells[0].Text);              
                     string tenSP = CartItemGridView.Rows[i].Cells[1].Text;
-                    
-                    cthd.MA_SP = spDAL.GetDVByTen(tenSP);
-                    
+                    string soLuong = ((TextBox)CartItemGridView.Rows[i].FindControl("txt_SoLuong")).Text;
 
-                    //cthd.SO_LUONG = Convert.ToInt32(CartItemGridView.Rows[i].Cells[3].Text);
-                    cthd.THANH_TIEN = Convert.ToDouble(CartItemGridView.Rows[i].Cells[4].Text);
+                    var a = spDAL.GetDVByTen(tenSP);
+                    int masp = a.MA_SP;
+                    double giaSP = Convert.ToDouble(a.GIA);
 
+                    cthd.MA_SP = a.MA_SP;
+                    cthd.MA_HD = hd.MA_HD;
+                    cthd.SO_LUONG = Convert.ToInt32(soLuong);
+                    cthd.THANH_TIEN = Convert.ToInt32(soLuong) * giaSP;
+                    
                     tongTien = tongTien + cthd.THANH_TIEN.Value;
 
-                    cthdDAL.Add(cthd);
+                    cthdDAL.Add(cthd);                   
+          
                     cart.Delete(idCart);
                 }
                 hd.TONG_TIEN = tongTien;

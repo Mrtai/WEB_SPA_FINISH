@@ -53,12 +53,11 @@ namespace DAL.DAL
             return result;
         }
 
-        public int GetDVByTen(string pTen)
+        public SAN_PHAM GetDVByTen(string pTen)
         {
             SAN_PHAM result = new SAN_PHAM();
             result = context.SAN_PHAM.FirstOrDefault(m => m.TEN_SP == pTen);
-            int maSP = result.MA_SP;
-            return maSP;
+            return result;
         }
     }
 }

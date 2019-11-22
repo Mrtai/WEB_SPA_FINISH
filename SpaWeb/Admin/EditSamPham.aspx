@@ -35,7 +35,7 @@
                     <asp:Label ID="Label2" runat="server" CssClass="control-label" Text="Mô Tả"></asp:Label>
                     
                     <asp:TextBox ID="txt_moTa" TextMode="multiline" Rows="5" runat="server" CssClass="form-control" Height="150px"></asp:TextBox>
-                    <script>CKEDITOR.replace('txt_moTa');</script>
+                    <script>CKEDITOR.replace('ContentPlaceHolder1_txt_moTa');</script>
 
 
                 </div>
