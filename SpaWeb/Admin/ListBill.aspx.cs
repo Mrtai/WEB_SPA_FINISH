@@ -13,7 +13,7 @@ namespace SpaWeb.Admin.Bill
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // The return type can be changed to IEnumerable, however to support
@@ -39,6 +39,11 @@ namespace SpaWeb.Admin.Bill
                 lb_messenger.Text = "Xóa Thành Công";
             
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
+
+        protected void btn_XacNhan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
