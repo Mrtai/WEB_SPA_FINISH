@@ -104,7 +104,7 @@
           </Key>
           <Property Name="MA_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TEN_SP" Type="nvarchar" MaxLength="50" />
-          <Property Name="MO_TA" Type="text" />
+          <Property Name="MO_TA" Type="ntext" />
           <Property Name="ANH" Type="varchar" MaxLength="100" />
           <Property Name="GIA" Type="float" />
         </EntityType>
@@ -394,7 +394,7 @@
           </Key>
           <Property Name="MA_SP" Type="Int32" Nullable="false" />
           <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="GIA" Type="Double" />
           <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />

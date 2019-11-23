@@ -50,13 +50,10 @@ namespace SpaWeb.User.Product
                 var btn = (Control)sender;
                 GridViewRow row = (GridViewRow)btn.NamingContainer;
                 int cartID = Convert.ToInt32(row.Cells[0].Text);
-                //Label lblValue = (Label)row.FindControl("LblValue");
-
+             
                 cartDAL.Delete(cartID);
-                
 
                 Page.Response.Redirect(Page.Request.Url.ToString(), true);
-               
             }
             
         }
