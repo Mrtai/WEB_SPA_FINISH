@@ -25,9 +25,9 @@ namespace SpaWeb.Admin.Product
         //     string sortByExpression
         public List<SAN_PHAM> SanPhamLoad_GetData()
         {
-            sanPhamDAL sp = new sanPhamDAL();
-            var itemList = sp.GetList();
-            return itemList;
+                sanPhamDAL sp = new sanPhamDAL();
+                var itemList = sp.GetList();
+                return itemList;
         }
 
         

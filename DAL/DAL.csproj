@@ -117,7 +117,7 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="SpaModel.edmx.diagram">
       <DependentUpon>SpaModel.edmx</DependentUpon>
