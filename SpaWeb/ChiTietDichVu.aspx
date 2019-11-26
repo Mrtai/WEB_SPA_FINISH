@@ -12,13 +12,13 @@
                         <h2 style="align-items: center; text-align: center"><%# Item.TEN_DICH_VU %></h2>
                         <div>
                             <div class="row">
-
-                                <h3>Đánh giá: <%# Item.DANH_GIA %>/5   <span class="glyphicon glyphicon-star" aria-hidden="true"></span></h3>
-
-                                <h3>Giá: <%# Item.GIA %></h3>
-                                <h3>Số lượng người đã sử dụng: <%# Item.SOLUONG_DUNG %></h3>
+                               
+                                <h3>Đánh giá: <%# Item.DANH_GIA %>/5   <span class="glyphicon glyphicon-star" aria-hidden="true"></span></h3> 
+							
+                               <h3>Giá: <%# Item.GIA %></h3> 
+                                <h3>Số lượng người đã sử dụng: <%# Item.SOLUONG_DUNG %></h3> 
                                 <h4>ĐẶC BIỆT: Vẫn hoạt động bình thường vào giờ nghỉ trưa, khách hàng có thể thoải mái booking mà không ngại ảnh hưởng đến công việc, học tập,…</h4>
-                            </div>
+	                        </div>
                         </div>
                     </div>
                 </div>
@@ -31,6 +31,5 @@
             </ItemTemplate>
         </asp:FormView>
     </div>
-
 
 </asp:Content>

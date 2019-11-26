@@ -83,6 +83,8 @@
     <Compile Include="LOAI_DICHVU.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\CartModel.cs" />
+    <Compile Include="Model\LichHenModel.cs" />
     <Compile Include="NHAN_VIEN.cs">
       <DependentUpon>SpaModel.tt</DependentUpon>
     </Compile>
@@ -116,7 +118,7 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="SpaModel.edmx.diagram">
       <DependentUpon>SpaModel.edmx</DependentUpon>

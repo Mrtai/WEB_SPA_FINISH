@@ -25,22 +25,30 @@ namespace SpaWeb.Admin.Product
         //     string sortByExpression
         public List<SAN_PHAM> SanPhamLoad_GetData()
         {
-            sanPhamDAL sp = new sanPhamDAL();
-            var itemList = sp.GetList();
-            return itemList;
+                sanPhamDAL sp = new sanPhamDAL();
+                var itemList = sp.GetList();
+                return itemList;
         }
 
         
         protected void btn_Delete_Click(object sender, EventArgs e)
         {
             sanPhamDAL sp = new sanPhamDAL();
-            int id = Convert.ToInt32((sender as LinkButton).CommandArgument);
-            int kq = sp.Delete(id);
-            lb_messenger.Visible = true;
-            if (kq != 0)
-                lb_messenger.Text = "Xóa Thành Công";
-            SanPhamLoad_GetData();
-            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+            try
+            {
+                int id = Convert.ToInt32((sender as LinkButton).CommandArgument);
+                int kq = sp.Delete(id);
+                lb_messenger.Visible = true;
+                if (kq != 0)
+                    lb_messenger.Text = "Xóa Thành Công";
+                SanPhamLoad_GetData();
+                Page.Response.Redirect(Page.Request.Url.ToString(), true);
+            }
+            catch
+            {
+                lb_messenger.Visible = true;
+                lb_messenger.Text = "Phải Xóa Các Chi Tiết Hóa Đơn Của Hóa Đơn Này Trước";
+            }
         }
     }
 }

@@ -53,7 +53,7 @@
                                 <ItemTemplate>
 
                                    <a href="EditSamPham.aspx?MaSP=<%# Eval("MA_SP") %>" class="btn btn-warning" style="padding:10px">Cập Nhật</a>
-                                   <a href="SanPhamLoad.aspx"> 
+                                   <a href="ListBill.aspx"> 
                                    <asp:LinkButton CssClass="btn btn-danger" style="padding:10px" runat ="server" Text="Xóa" 
                                         CommandArgument='<%# Eval("MA_SP") %>' OnClick="btn_Delete_Click"
                                         OnClientClick="return confirm('Bạn Có Muốn Xóa Sản Phẩm Này Không?');"/>

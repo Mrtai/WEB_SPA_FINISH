@@ -40,7 +40,7 @@
           </Key>
           <Property Name="MA_DV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TEN_DICH_VU" Type="nvarchar" MaxLength="50" />
-          <Property Name="CHI_TIET" Type="text" />
+          <Property Name="CHI_TIET" Type="ntext" />
           <Property Name="GIA" Type="float" />
           <Property Name="MALOAI" Type="int" />
           <Property Name="SOLUONG_DUNG" Type="int" />
@@ -74,7 +74,7 @@
           <Property Name="MA_DV" Type="int" />
           <Property Name="NGAY" Type="datetime" />
           <Property Name="GIO" Type="nvarchar" MaxLength="50" />
-          <Property Name="NOTE" Type="text" />
+          <Property Name="NOTE" Type="nvarchar(max)" />
           <Property Name="TRANG_THAI" Type="bit" />
         </EntityType>
         <EntityType Name="LOAI_DICHVU">
@@ -90,11 +90,13 @@
             <PropertyRef Name="MA_NV" />
           </Key>
           <Property Name="MA_NV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MA_CN" Type="int" />
           <Property Name="TEN_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="EMAIL" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="USERNAME" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="PASSWORD" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="TRANGTHAI" Type="int" Nullable="false" />
+          <Property Name="PASSWORD" Type="varbinary(max)" Nullable="false" />
+          <Property Name="TRANGTHAI" Type="bit" Nullable="false" />
+          <Property Name="QUYEN" Type="int" />
         </EntityType>
         <EntityType Name="SAN_PHAM">
           <Key>
@@ -102,7 +104,7 @@
           </Key>
           <Property Name="MA_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TEN_SP" Type="nvarchar" MaxLength="50" />
-          <Property Name="MO_TA" Type="text" />
+          <Property Name="MO_TA" Type="ntext" />
           <Property Name="ANH" Type="varchar" MaxLength="100" />
           <Property Name="GIA" Type="float" />
         </EntityType>
@@ -224,6 +226,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_NHAN_VIEN_CHI_NHANH">
+          <End Role="CHI_NHANH" Type="Self.CHI_NHANH" Multiplicity="0..1" />
+          <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHI_NHANH">
+              <PropertyRef Name="MA_CN" />
+            </Principal>
+            <Dependent Role="NHAN_VIEN">
+              <PropertyRef Name="MA_CN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TAI_KHOA_CO_KHACH_HA">
           <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
           <End Role="TAI_KHOAN" Type="Self.TAI_KHOAN" Multiplicity="*" />
@@ -284,6 +298,10 @@
             <End Role="CHI_NHANH" EntitySet="CHI_NHANH" />
             <End Role="LICH_HEN" EntitySet="LICH_HEN" />
           </AssociationSet>
+          <AssociationSet Name="FK_NHAN_VIEN_CHI_NHANH" Association="Self.FK_NHAN_VIEN_CHI_NHANH">
+            <End Role="CHI_NHANH" EntitySet="CHI_NHANH" />
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+          </AssociationSet>
           <AssociationSet Name="FK_TAI_KHOA_CO_KHACH_HA" Association="Self.FK_TAI_KHOA_CO_KHACH_HA">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
@@ -302,6 +320,7 @@
           <Property Name="DIA_CHI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="LICH_HEN" Relationship="Self.FK_LICH_HEN_O_CHI_NHAN" FromRole="CHI_NHANH" ToRole="LICH_HEN" />
+          <NavigationProperty Name="NHAN_VIEN" Relationship="DB_SPAModel.FK_NHAN_VIEN_CHI_NHANH" FromRole="CHI_NHANH" ToRole="NHAN_VIEN" />
         </EntityType>
         <EntityType Name="CHI_TIET_HOA_DON">
           <Key>
@@ -312,8 +331,9 @@
           <Property Name="MA_HD" Type="Int32" Nullable="false" />
           <Property Name="SO_LUONG" Type="Int32" />
           <Property Name="THANH_TIEN" Type="Double" />
-          <NavigationProperty Name="HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__HOA_DON" FromRole="CHI_TIET_HOA_DON" ToRole="HOA_DON" />
+          <NavigationProperty Name="HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__HOA_DON" FromRole="CHI_TIET_HOA_DON" ToRole="HOA_DON" />D
           <NavigationProperty Name="SAN_PHAM" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="CHI_TIET_HOA_DON" ToRole="SAN_PHAM" />
+
         </EntityType>
         <EntityType Name="HOA_DON">
           <Key>
@@ -348,7 +368,7 @@
           <Property Name="MA_DV" Type="Int32" />
           <Property Name="NGAY" Type="DateTime" Precision="3" />
           <Property Name="GIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHI_NHANH" Relationship="Self.FK_LICH_HEN_O_CHI_NHAN" FromRole="LICH_HEN" ToRole="CHI_NHANH" />
           <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK_LICH_HEN_CUA_KHACH_HA" FromRole="LICH_HEN" ToRole="KHACH_HANG" />
           <Property Name="TRANG_THAI" Type="Boolean" />
@@ -360,7 +380,7 @@
           </Key>
           <Property Name="MA_SP" Type="Int32" Nullable="false" />
           <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="GIA" Type="Double" />
           <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />
@@ -432,7 +452,6 @@
           <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" />
           <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" />
           <EntitySet Name="LICH_HEN" EntityType="Self.LICH_HEN" />
-          <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" />
           <AssociationSet Name="FK_LICH_HEN_O_CHI_NHAN" Association="Self.FK_LICH_HEN_O_CHI_NHAN">
             <End Role="CHI_NHANH" EntitySet="CHI_NHANH" />
             <End Role="LICH_HEN" EntitySet="LICH_HEN" />
@@ -453,7 +472,6 @@
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="LICH_HEN" EntitySet="LICH_HEN" />
           </AssociationSet>
-          <EntitySet Name="NHAN_VIEN" EntityType="DB_SPAModel.NHAN_VIEN" />
           <EntitySet Name="TAI_KHOAN" EntityType="DB_SPAModel.TAI_KHOAN" />
           <AssociationSet Name="FK_TAI_KHOA_CO_KHACH_HA" Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
@@ -465,11 +483,22 @@
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="CartItem" EntitySet="CartItems" />
           </AssociationSet>
+          <EntitySet Name="NHAN_VIEN" EntityType="DB_SPAModel.NHAN_VIEN" />
+          <AssociationSet Name="FK_NHAN_VIEN_CHI_NHANH" Association="DB_SPAModel.FK_NHAN_VIEN_CHI_NHANH">
+            <End Role="CHI_NHANH" EntitySet="CHI_NHANH" />
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+          </AssociationSet>
+          <EntitySet Name="DICH_VU" EntityType="DB_SPAModel.DICH_VU" />
+          <EntitySet Name="SAN_PHAM" EntityType="DB_SPAModel.SAN_PHAM" />
           <AssociationSet Name="FK_CartItem_SAN_PHAM" Association="DB_SPAModel.FK_CartItem_SAN_PHAM">
             <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
             <End Role="CartItem" EntitySet="CartItems" />
           </AssociationSet>
           <EntitySet Name="DICH_VU" EntityType="DB_SPAModel.DICH_VU" />
+          <AssociationSet Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM" Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM">
+            <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+            <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
+          </AssociationSet>
           <AssociationSet Name="FK_DICH_VU_LOAI_DICHVU" Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU">
             <End Role="LOAI_DICHVU" EntitySet="LOAI_DICHVU" />
             <End Role="DICH_VU" EntitySet="DICH_VU" />
@@ -479,17 +508,6 @@
             <End Role="LICH_HEN" EntitySet="LICH_HEN" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="NHAN_VIEN">
-          <Key>
-            <PropertyRef Name="MA_NV" />
-          </Key>
-          <Property Name="MA_NV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TRANGTHAI" Type="Int32" Nullable="false" />
-          <Property Name="TEN_NV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="TAI_KHOAN">
           <Key>
             <PropertyRef Name="MA_TK" />
@@ -546,6 +564,59 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="NHAN_VIEN">
+          <Key>
+            <PropertyRef Name="MA_NV" />
+          </Key>
+          <Property Name="MA_NV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_NV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="TRANGTHAI" Type="Boolean" Nullable="false" />
+          <Property Name="MA_CN" Type="Int32" />
+          <Property Name="QUYEN" Type="Int32" />
+          <NavigationProperty Name="CHI_NHANH" Relationship="DB_SPAModel.FK_NHAN_VIEN_CHI_NHANH" FromRole="NHAN_VIEN" ToRole="CHI_NHANH" />
+        </EntityType>
+        <Association Name="FK_NHAN_VIEN_CHI_NHANH">
+          <End Type="DB_SPAModel.CHI_NHANH" Role="CHI_NHANH" Multiplicity="0..1" />
+          <End Type="DB_SPAModel.NHAN_VIEN" Role="NHAN_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHI_NHANH">
+              <PropertyRef Name="MA_CN" />
+            </Principal>
+            <Dependent Role="NHAN_VIEN">
+              <PropertyRef Name="MA_CN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DICH_VU">
+          <Key>
+            <PropertyRef Name="MA_DV" />
+          </Key>
+          <Property Name="MA_DV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_DICH_VU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CHI_TIET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GIA" Type="Double" />
+          <Property Name="MALOAI" Type="Int32" />
+          <Property Name="SOLUONG_DUNG" Type="Int32" />
+          <Property Name="DANH_GIA" Type="Int32" />
+          <Property Name="IMAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LOAI_DICHVU" Relationship="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" FromRole="DICH_VU" ToRole="LOAI_DICHVU" />
+          <NavigationProperty Name="LICH_HEN" Relationship="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" FromRole="DICH_VU" ToRole="LICH_HEN" />
+        </EntityType>
+        <EntityType Name="SAN_PHAM">
+          <Key>
+            <PropertyRef Name="MA_SP" />
+          </Key>
+          <Property Name="MA_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GIA" Type="Double" />
+          <NavigationProperty Name="CartItems" Relationship="DB_SPAModel.FK_CartItem_SAN_PHAM" FromRole="SAN_PHAM" ToRole="CartItem" />
+          <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />
+        </EntityType>
         <Association Name="FK_CartItem_SAN_PHAM">
           <End Type="DB_SPAModel.SAN_PHAM" Role="SAN_PHAM" Multiplicity="0..1" />
           <End Type="DB_SPAModel.CartItem" Role="CartItem" Multiplicity="*" />
@@ -573,6 +644,18 @@
           <NavigationProperty Name="LOAI_DICHVU" Relationship="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" FromRole="DICH_VU" ToRole="LOAI_DICHVU" />
           <NavigationProperty Name="LICH_HEN" Relationship="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" FromRole="DICH_VU" ToRole="LICH_HEN" />
         </EntityType>
+        <Association Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM">
+          <End Type="DB_SPAModel.SAN_PHAM" Role="SAN_PHAM" Multiplicity="1" />
+          <End Type="DB_SPAModel.CHI_TIET_HOA_DON" Role="CHI_TIET_HOA_DON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SAN_PHAM">
+              <PropertyRef Name="MA_SP" />
+            </Principal>
+            <Dependent Role="CHI_TIET_HOA_DON">
+              <PropertyRef Name="MA_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DICH_VU_LOAI_DICHVU">
           <End Type="DB_SPAModel.LOAI_DICHVU" Role="LOAI_DICHVU" Multiplicity="0..1" />
           <End Type="DB_SPAModel.DICH_VU" Role="DICH_VU" Multiplicity="*" />
@@ -656,29 +739,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SAN_PHAM">
-            <EntityTypeMapping TypeName="DB_SPAModel.SAN_PHAM">
-              <MappingFragment StoreEntitySet="SAN_PHAM">
-                <ScalarProperty Name="MA_SP" ColumnName="MA_SP" />
-                <ScalarProperty Name="TEN_SP" ColumnName="TEN_SP" />
-                <ScalarProperty Name="MO_TA" ColumnName="MO_TA" />
-                <ScalarProperty Name="ANH" ColumnName="ANH" />
-                <ScalarProperty Name="GIA" ColumnName="GIA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NHAN_VIEN">
-            <EntityTypeMapping TypeName="DB_SPAModel.NHAN_VIEN">
-              <MappingFragment StoreEntitySet="NHAN_VIEN">
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="TEN_NV" ColumnName="TEN_NV" />
-                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
-                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
-                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-                <ScalarProperty Name="MA_NV" ColumnName="MA_NV" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TAI_KHOAN">
             <EntityTypeMapping TypeName="DB_SPAModel.TAI_KHOAN">
               <MappingFragment StoreEntitySet="TAI_KHOAN">
@@ -710,6 +770,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="NHAN_VIEN">
+            <EntityTypeMapping TypeName="DB_SPAModel.NHAN_VIEN">
+              <MappingFragment StoreEntitySet="NHAN_VIEN">
+                <ScalarProperty Name="QUYEN" ColumnName="QUYEN" />
+                <ScalarProperty Name="MA_CN" ColumnName="MA_CN" />
+                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TEN_NV" ColumnName="TEN_NV" />
+                <ScalarProperty Name="MA_NV" ColumnName="MA_NV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="DICH_VU">
             <EntityTypeMapping TypeName="DB_SPAModel.DICH_VU">
               <MappingFragment StoreEntitySet="DICH_VU">
@@ -721,6 +795,17 @@
                 <ScalarProperty Name="CHI_TIET" ColumnName="CHI_TIET" />
                 <ScalarProperty Name="TEN_DICH_VU" ColumnName="TEN_DICH_VU" />
                 <ScalarProperty Name="MA_DV" ColumnName="MA_DV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAN_PHAM">
+            <EntityTypeMapping TypeName="DB_SPAModel.SAN_PHAM">
+              <MappingFragment StoreEntitySet="SAN_PHAM">
+                <ScalarProperty Name="GIA" ColumnName="GIA" />
+                <ScalarProperty Name="ANH" ColumnName="ANH" />
+                <ScalarProperty Name="MO_TA" ColumnName="MO_TA" />
+                <ScalarProperty Name="TEN_SP" ColumnName="TEN_SP" />
+                <ScalarProperty Name="MA_SP" ColumnName="MA_SP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

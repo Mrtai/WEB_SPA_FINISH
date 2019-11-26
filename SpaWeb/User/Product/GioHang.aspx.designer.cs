@@ -31,13 +31,22 @@ namespace SpaWeb.User.Product {
         protected global::System.Web.UI.WebControls.GridView CartItemGridView;
         
         /// <summary>
-        /// btn_save control.
+        /// lb_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_save;
+        protected global::System.Web.UI.WebControls.Label lb_title;
+        
+        /// <summary>
+        /// lb_tongtien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_tongtien;
         
         /// <summary>
         /// btn_datHang control.

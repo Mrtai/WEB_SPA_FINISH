@@ -15,10 +15,14 @@ namespace DAL
     public partial class NHAN_VIEN
     {
         public int MA_NV { get; set; }
-        public string USERNAME { get; set; }
-        public string PASSWORD { get; set; }
-        public int TRANGTHAI { get; set; }
         public string TEN_NV { get; set; }
         public string EMAIL { get; set; }
+        public string USERNAME { get; set; }
+        public byte[] PASSWORD { get; set; }
+        public bool TRANGTHAI { get; set; }
+        public Nullable<int> MA_CN { get; set; }
+        public Nullable<int> QUYEN { get; set; }
+    
+        public virtual CHI_NHANH CHI_NHANH { get; set; }
     }
 }

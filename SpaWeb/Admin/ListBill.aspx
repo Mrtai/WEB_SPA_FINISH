@@ -15,7 +15,7 @@
                         SelectMethod="HoaDonLoadGrid_GetData">
                         <Columns>
                           
-                          <asp:TemplateField HeaderText="Tên Sản Phẩm" HeaderStyle-CssClass="h4 text-center" >
+                          <asp:TemplateField HeaderText="Mã Hóa Đơn" HeaderStyle-CssClass="h4 text-center" >
                             <ItemTemplate>
                                 <div class="text-left">
                                     <%# Eval("MA_HD") %>
@@ -24,13 +24,7 @@
 
                           </asp:TemplateField>
                         
-                            <asp:TemplateField HeaderText="Mã Khách Hàng" HeaderStyle-CssClass="h4 text-center">
-                            <ItemTemplate>
-                                <div>
-                                    <%# Eval("MA_KH") %>
-                                </div>
-                            </ItemTemplate>
-                          </asp:TemplateField>
+                          <asp:BoundField DataField="KHACH_HANG.TEN_KH" HeaderText="Khách Hàng"/>
 
                           <asp:TemplateField HeaderText="Tổng Tiền" HeaderStyle-CssClass="h4 text-center">
                             <ItemTemplate>
@@ -42,9 +36,13 @@
 
                             <asp:TemplateField HeaderText="Chức Năng" HeaderStyle-CssClass="h4 text-center">
                                 <ItemTemplate>
-
-                                   <a href="#" class="btn btn-warning" style="padding:10px">Xác Nhận</a>
-                                   
+                                   <asp:Button class="btn btn-google" style="padding:10px" runat ="server" ID="btn_XacNhan" OnClick="btn_XacNhan_Click" Text="Xác Nhận"/>
+                                   <a href="DetailBill.aspx?MaHD=<%# Eval("MA_HD") %>" class="btn btn-facebook" style="padding:10px">Chi Tiết</a>
+                                    <a href="SanPhamLoad.aspx"> 
+                                   <asp:LinkButton CssClass="btn btn-danger" style="padding:10px" runat ="server" Text="Xóa" 
+                                        CommandArgument='<%# Eval("MA_HD") %>' OnClick="btn_Delete_Click"
+                                        OnClientClick="return confirm('Bạn Có Muốn Xóa Sản Phẩm Này Không?');"/>
+                                    </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

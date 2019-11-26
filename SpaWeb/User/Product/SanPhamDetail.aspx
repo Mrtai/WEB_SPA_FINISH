@@ -3,11 +3,6 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server" >
-
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap.css" rel="stylesheet" />
-
     
     <asp:FormView ID="sanPhamDetail" SelectMethod="sanPhamDetail_GetItem" RenderOuterTable="false" runat="server" ItemType="DAL.SAN_PHAM">
         <ItemTemplate>
@@ -27,36 +22,46 @@
                         </li>
                     </ol>
                 </div>
-               <div style="vertical-align:baseline; height:300px; background-color:aqua">
+               <div class="row" style="vertical-align:baseline; height:300px;">
                 
-                        <div style=" float:left; width:33%">
+                        <div class="col-lg-4">
                             <img class="img-responsive" style="height:300px; margin-bottom:2em" src="../../Resource/image/<%#:Item.ANH %>"/>
                         </div>
-                        <div style="float:right; margin-top:0,5em; width:66%">
-                            <asp:Label runat="server" ID="label1" class="h1 text-uppercase" style="line-height: 42px; font-size: 26px"><%#: Item.TEN_SP %></asp:Label>
-                            <p>
-                                <asp:Label runat="server" style="font-size:35px ; color:midnightblue; font-weight:bold">
-                                    <%#: String.Format("{0:c}",Item.GIA) %>
-                                </asp:Label>
-                            </p>
-                            <div>
-                               <asp:TextBox CssClass="form-control" ID="txt_soLuong" runat="server" TextMode="Number" Width="80px"></asp:TextBox>
-                               <asp:Button runat="server" CssClass="btn btn-primary" Text="Thêm Vào Giỏ Hàng"
-                                   ID="btn_AddCart" OnClick="btn_AddCart_Click"/>
+                        <div class="col-lg-8">
+                            <asp:Label runat="server" ID="label1" class="" style="line-height: 42px; font-size: 26px"><%#: Item.TEN_SP %></asp:Label>
+                            <div class="form-group">
+                              <asp:Label runat="server" style="font-size:35px ; color:midnightblue; font-weight:bold">
+                                        <%#: String.Format("{0:c}",Item.GIA) %>
+                              </asp:Label>
                             </div>
+                            <div class="form-group">
+                              <asp:TextBox CssClass="form-control" ID="txt_soLuong" runat="server" Text="1"  Width="80px"></asp:TextBox>
+                                </div>
+                            <div class="form-group">
+                              <asp:Button runat="server" CssClass="btn btn-primary" Text="Thêm Vào Giỏ Hàng"
+                                       ID="btn_AddCart" OnClick="btn_AddCart_Click"/>
+                           </div>    
                         </div>
-                   <div style="float:left;width:100%">
-                      <ul style="text-align:center; list-style:none">
-                          <li style="display: inline-block;">
-                              <a>Mô Tả</a>
-                          </li>
-                          <li style="display: inline-block;"><asp:Label runat="server">Đánh Giá</asp:Label></li>
-                      </ul>
-                   </div>
-                    <%# Eval("MO_TA")%>
+                </div>
+
+                <div class="row container">
+                   <h2 class="text-center">Mô tả</h2>
+                    <div >
+                        <%# Eval("MO_TA")%>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <h2 class="text-center">Đánh giá</h2>
                 </div>
                 
             </div>
         </ItemTemplate>
     </asp:FormView>
+    <script>
+        $("#btn_AddCart_Click").click(function{
+            var sl = $("$lb_count_cart").html();
+            $("$lb_count_cart").html(sl + 1);
+        });
+    </script>
 </asp:Content>

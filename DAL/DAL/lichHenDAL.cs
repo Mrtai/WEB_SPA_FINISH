@@ -45,11 +45,29 @@ namespace DAL.DAL
             list = context.LICH_HEN.ToList();
             return list;
         }
+        public List<LICH_HEN> GetListByCN(int MACN)
+        {
+            List<LICH_HEN> list = new List<LICH_HEN>();
+            list = context.LICH_HEN.Where(m => m.MA_CN == MACN).ToList();
+            return list;
+        }
 
         public LICH_HEN GetDVByMa(int pMa)
         {
             LICH_HEN result = new LICH_HEN();
             result = context.LICH_HEN.FirstOrDefault(m => m.MA_LH == pMa);
+            return result;
+        }
+        public int ProcessLichHen(int pMa)
+        {
+            int result = 0;
+            LICH_HEN k = context.LICH_HEN.FirstOrDefault(m => m.MA_LH == pMa);
+            
+            if (k != null)
+            {
+                k.TRANG_THAI = true;
+            }
+            result = context.SaveChanges();
             return result;
         }
     }

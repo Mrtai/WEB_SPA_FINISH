@@ -10,20 +10,23 @@
         <EntityTypeShape EntityType="DB_SPAModel.HOA_DON" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_SPAModel.KHACH_HANG" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_SPAModel.LICH_HEN" Width="1.5" PointX="7.375" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_SPAModel.SAN_PHAM" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_O_CHI_NHAN" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__HOA_DON" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_HOA_DON_THANH_TOA_KHACH_HA" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="9.75" PointY="2.875" />
         <EntityTypeShape EntityType="DB_SPAModel.TAI_KHOAN" Width="1.5" PointX="2.125" PointY="9.125" />
         <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" />
         <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="6" PointY="11.25" />
         <EntityTypeShape EntityType="DB_SPAModel.CartItem" Width="1.5" PointX="5.25" PointY="0.75" />
         <AssociationConnector Association="DB_SPAModel.FK_CartItem_KHACH_HANG" />
+        <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="9.125" PointY="2.375" />
+        <AssociationConnector Association="DB_SPAModel.FK_NHAN_VIEN_CHI_NHANH" />
+        <EntityTypeShape EntityType="DB_SPAModel.DICH_VU" Width="1.5" PointX="8.25" PointY="10.625" />
+        <EntityTypeShape EntityType="DB_SPAModel.SAN_PHAM" Width="1.5" PointX="9.375" PointY="7" />
         <AssociationConnector Association="DB_SPAModel.FK_CartItem_SAN_PHAM" />
         <EntityTypeShape EntityType="DB_SPAModel.DICH_VU" Width="1.5" PointX="8.25" PointY="10.625" />
+        <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" />
         <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" />
       </Diagram>

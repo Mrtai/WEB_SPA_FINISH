@@ -60,7 +60,7 @@
     <script>
         $(document).ready(function () {
             $('#myCarousel').carousel({
-                interval: 2000
+                interval: 3000
             });
 
             var clickEvent = false;
@@ -90,7 +90,7 @@
        <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
                  <input id="tab<%# Container.ItemIndex +1 %>" type="radio" name="tabs" checked>
-                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>
+                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>                  
             </ItemTemplate>
            
         </asp:Repeater>
@@ -282,7 +282,7 @@
                             <a href="/documentation/joomla-extensions/sp-easyimagegallery">
                                 <img src="https://gaspa.vn/wp-content/uploads/2019/05/diamond-1.jpg" alt="Joomla Extensions">
                             </a>
-                            <h2>Platinum Member</h2>
+                            <h2>Diamond Member</h2>
                             <div class="documentation-shortdesc">
                                 Giảm 10% khi sử dụng dịch vụ. Gà Spa (Áp dụng cho tất cả dịch vụ).
                                 Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.
