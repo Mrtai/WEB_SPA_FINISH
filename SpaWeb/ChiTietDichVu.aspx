@@ -23,11 +23,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h2 style="text-align:center;padding:30px">Nội dung chi tiết và cách sử dụng dịch vụ</h2>
+                    <h2 style="text-align: center; padding: 30px">Nội dung chi tiết và cách sử dụng dịch vụ</h2>
+                </div>
+                <div>
+                    <%# Item.CHI_TIET %>
                 </div>
             </ItemTemplate>
         </asp:FormView>
     </div>
-   
 
 </asp:Content>

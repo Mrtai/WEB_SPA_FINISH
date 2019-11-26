@@ -10,11 +10,7 @@
                         <img src="https://viectotnhat.com/bi-quyet-nghe-nghiep/wp-content/uploads/2017/07/gap-go-ceo-trung-tam-spa-cho-tre-so-sinh-dau-tien-o-viet-nam-hinh-anh-1.jpg" width="100%" style="height:500px">
                         <div class="carousel-caption">
                             <h3>Nâng niu và chăm sóc làn da</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                        ipsum dolor sit amet, consetetur sadipscing elitr.
-                            </p>
+                           
                         </div>
                     </div>
                     <!-- End Item -->
@@ -22,11 +18,7 @@
                         <img src="https://maihanspa.com/ino_upload/source/Tin%20t%E1%BB%A9c/Beauty%20Spa/3.png" width="100%" style="height:500px">
                         <div class="carousel-caption">
                             <h3>Thăm khám và soi da hoàn toàn miễn phí</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                        ipsum dolor sit amet, consetetur sadipscing elitr.
-                            </p>
+                            
                         </div>
                     </div>
                     <!-- End Item -->
@@ -46,25 +38,20 @@
                         <img src="https://image.thanhnien.vn/660/uploaded/quochung.qc/2019_04_20/mh6/1_lbsw.png" width="100%" style="height:500px">
                         <div class="carousel-caption">
                             <h3>Trang thiết bị hiện đại</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                        ipsum dolor sit amet, consetetur sadipscing elitr.
-                            </p>
+                            
                         </div>
                     </div>
                     <!-- End Item -->
                 </div>
                 <!-- End Carousel Inner -->
                 <ul class="nav nav-pills nav-justified">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
-                ipsum dolor sit</small></a></li>
-                    <li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum
-                dolor sit</small></a></li>
-                    <li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum
-                dolor sit</small></a></li>
-                    <li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum
-                dolor sit</small></a></li>
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Nâng niu và chăm sóc làn da</a></li>
+                    <li data-target="#myCarousel" data-slide-to="1"><a href="#">Điều trị chuyên sâu
+               </a></li>
+                    <li data-target="#myCarousel" data-slide-to="2"><a href="#">Sản phẩm độc quyền thương hiệu Gà Spa
+               </a></li>
+                    <li data-target="#myCarousel" data-slide-to="3"><a href="#">Thăm khám và soi da hoàn toàn miễn phí
+              </a></li>
                 </ul>
             </div>
             <!-- End Carousel -->
@@ -98,7 +85,7 @@
     <%-- //endtop1--%>
 
     <!-- Tabs -->
-    <h1>Responsive CSS Tabs</h1>
+    <h1>Chuyên Mục Dịch Vụ Cung Cấp</h1>
     <div class="tab_container">
        <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
@@ -113,17 +100,37 @@
             <div class="row">
                 <asp:Repeater ID="Repeater4" runat="server">
                     <ItemTemplate>
-                         <div class="col-md-4">
-                            <div class="card bg-light">
+                        <div class="col-md-4">
+                             <div class="card bg-light" style="padding-left:30px" >
                                 <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                                <div class="card-body">
-                                    <h2> <%# Eval("TEN_DICH_VU")%></h2>
-                                    <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                                <div class="card-body" style="padding:15px">
+
+                                    <div class="row">
+                                         <h3> <%# Eval("TEN_DICH_VU")%></h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p>Giá Sử dụng:</p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <%# Eval("GIA")%>
+                                        </div>
+                                       
+                                    </div>
+                                   <div class="row">
+                                        <div class="col-lg-4">
+                                            <p>Sản Phẩm được đánh giá:</p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <%# Eval("DANH_GIA")%>/5
+                                        </div>
+                                       
+                                    </div>
+                                   <a href="ChiTietDichVu.aspx?MaDV=<%#Eval("MA_DV") %>" class="btn btn-sm btn-info float-right">Xem Thêm <i class="fas fa-angle-double-right"></i></a>
                                 </div>
-                            </div>
-                        </div>
+                             </div>
+                          </div>
+                       
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
@@ -135,22 +142,14 @@
 
     </div>
     <!-- ./Tabs -->
-    <div class="row" style="height: 500px; background-color: aqua; width: 100%; margin: 0px; padding-top: 100px">
-        <div class="row" style="height: 300px; margin-top: 100px; width: 100%; margin: 0px">
-            <div class="col-md-4" style="height: 300px; background-color: azure">
-                <asp:Repeater ID="Repeater1" runat="server">
-
-                </asp:Repeater>
-            </div>
-            <div class="col-md-8" style="height: 300px; background-color: chocolate">
-            </div>
-
-        </div>
-
-    </div>
+   
     <%--   //tab--%>
     <div class="container">
-        <h1>Use Bootstrap 3's carousel to show multiple items per slide.</h1>
+        <div class="row" style="text-align:center">
+             <h2>Trước và sau khi điều trị tại Gà Spa</h2>
+        <h3>Tùy Vào Cơ Địa Của Mỗi Người Kết Quả Sẽ Có Đôi Chút Khác Biệtr slide.</h3>
+        </div>
+       
         <div class="row">
             <div class="col-md-12">
                 <div class="carousel slide multi-item-carousel" id="theCarousel">
@@ -158,37 +157,37 @@
                         <div class="item active">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?perth,australia" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-14.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?fremantle,australia" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-11.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?west-australia" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-12.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?perth" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-11.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?quokka,perth" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-11.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?margaretriver,australia" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-11.jpg" class="img-responsive"></a>
                             </div>
                         </div>
                         <!-- add  more items here -->
@@ -197,7 +196,7 @@
                         <div class="item">
                             <div class="col-xs-4">
                                 <a href="#1">
-                                    <img src="https://source.unsplash.com/300x300/?perth,australia&r=7" class="img-responsive"></a>
+                                    <img src="https://gaspa.vn/wp-content/uploads/2019/05/kq-dieu-tri-07.jpg" class="img-responsive"></a>
                             </div>
                         </div>
 
@@ -244,10 +243,10 @@
                             </a>
                             <h2>Member</h2>
                             <div class="documentation-shortdesc">
-                                Tích lũy điểm thành viên khi sử dụng dịch vụ tại Gà.
+                               Tích lũy điểm thành viên khi sử dụng dịch vụ tại Gà.
                                 Được nâng cấp lên thành Gold Member khi đủ điểm tích lũy
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/sp-page-builder/sp-page-builder-2-x">Xem thêm</a>
+                            <a class="btn btn-doc-outline" href="#">Xem thêm</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -257,11 +256,11 @@
                             </a>
                             <h2>Gold Member</h2>
                             <div class="documentation-shortdesc">
-                                Giảm 5% khi sử dụng dịch vụ tại Gà Spa (Áp dụng cho tất cả dịch vụ).
+                               Giảm 5% khi sử dụng dịch vụ tại Gà Spa (Áp dụng cho tất cả dịch vụ).
                                 Tích lũy đủ 10.000.000 khi sử dụng dịch vụ tại Gà Spa.
                                 Được nâng cấp lên thành Diamond Member khi đủ điểm tích lũy.
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/joomla-templates/rhino">Xem thêm</a>
+                            <a class="btn btn-doc-outline"  href="#">Xem thêm</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -275,7 +274,7 @@
                                 Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.
                                 Được nâng cấp lên thành Platinum Member khi đủ điểm tích lũy
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">Xem thêm</a>
+                            <a class="btn btn-doc-outline"  href="#">Xem thêm</a>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -283,13 +282,13 @@
                             <a href="/documentation/joomla-extensions/sp-easyimagegallery">
                                 <img src="https://gaspa.vn/wp-content/uploads/2019/05/diamond-1.jpg" alt="Joomla Extensions">
                             </a>
-                            <h2>Platinum Member</h2>
+                            <h2>Diamond Member</h2>
                             <div class="documentation-shortdesc">
                                 Giảm 10% khi sử dụng dịch vụ. Gà Spa (Áp dụng cho tất cả dịch vụ).
                                 Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.
                                 Được nâng cấp lên thành Platinum Member khi đủ điểm tích lũy
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">Xem thêm</a>
+                            <a class="btn btn-doc-outline"  href="#">Xem thêm</a>
                         </div>
                     </div>
 

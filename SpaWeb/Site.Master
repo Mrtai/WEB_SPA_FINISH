@@ -462,6 +462,7 @@ label .fa {
         
     </style>
 
+
 </head>
 <body>
     <form runat="server">
@@ -489,9 +490,9 @@ label .fa {
 
 
                 <div class="navbar-collapse collapse row">
-                    <div runat="server" id="logo" style="width: 300px; height: 50px" class="col-md-4">
+                    <div runat="server" id="logo" style="width: 250px; height: 50px" class="col-md-4">
                         <a href="https://gaspa.vn/" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
-                            <img style="width: 300px; height: 50px" class="normal_logo" src="https://gaspa.vn/wp-content/uploads/2019/05/logo-ngang.png" alt="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
+                            <img style="width: 200px; height: 50px" class="normal_logo" src="https://gaspa.vn/wp-content/uploads/2019/05/logo-ngang.png" alt="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
                         </a>
                     </div>
                     <div class="col-md-8" style="float: right; color: #141414">
@@ -518,7 +519,6 @@ label .fa {
                                 <asp:HyperLink ID="link_login" Visible="false" NavigateUrl="~/User/Login/login.aspx" runat="server" style="color: #000000">Đăng nhập</asp:HyperLink></li>
                             <li>
                                 <asp:HyperLink ID="link_dangky" Visible="false" NavigateUrl="~/User/Login/register.aspx" runat="server" style="color: #000000">Đăng ký</asp:HyperLink></li>
-
                         </ul>
                     </div>
 
