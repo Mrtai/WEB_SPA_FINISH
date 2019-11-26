@@ -102,7 +102,7 @@
                     <ItemTemplate>
                         <div class="col-md-4">
                              <div class="card bg-light" style="padding-left:30px" >
-                                <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                                <img class="card-img-top" style="width:300px;height:300px" src="Resource/image/<%# Eval("IMAGE")%>" alt="Card image cap">
                                 <div class="card-body" style="padding:15px">
 
                                     <div class="row">
@@ -126,7 +126,7 @@
                                         </div>
                                        
                                     </div>
-                                   <a href="ChiTietDichVu.aspx?MaDV=<%#Eval("MA_DV") %>" class="btn btn-sm btn-info float-right">Xem Thêm <i class="fas fa-angle-double-right"></i></a>
+                                   <a href="ChiTietDichVu.aspx?MaDV=<%#Eval("MA_DV") %>" class="btn btn-sm btn-info float-right">Xem Thêm</a>
                                 </div>
                              </div>
                           </div>

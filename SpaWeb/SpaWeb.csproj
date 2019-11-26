@@ -284,6 +284,7 @@
     <Content Include="Admin\vendors\iconfonts\mdi\scss\_icons.scss" />
     <Content Include="Admin\vendors\iconfonts\mdi\scss\_path.scss" />
     <Content Include="Admin\vendors\iconfonts\mdi\scss\_variables.scss" />
+    <Content Include="Resource\image\DV1574527856_bg.png" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
     <Content Include="Scripts\ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -921,7 +922,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resource\image\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

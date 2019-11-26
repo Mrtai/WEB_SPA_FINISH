@@ -13,7 +13,6 @@
             <asp:Label runat="server" Text="" ID="lb_messenger"
                 Visible="false"
                 CssClass="text-danger h3"></asp:Label>
-
             <div class="forms-sample">
                 <div class="form-group">
                     <asp:Label ID="la" runat="server" Text="Tên Sản Phẩm" CssClass="control-label" for="txt_tenSP"></asp:Label>

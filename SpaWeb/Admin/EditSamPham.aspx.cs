@@ -29,24 +29,16 @@ namespace SpaWeb.Admin.Product
 
                 lb_messenger.Visible = true;
                 var idSP = Request.QueryString["MaSP"];
-
+                string location = "";
+                string fn = "";
                 if (FileUpload_hinh.HasFile)
                 {
-                    try
-                    {
-                        if (FileUpload_hinh.PostedFile.ContentType == "image/jpeg")
-                        {
-                            if (FileUpload_hinh.PostedFile.ContentLength < 102400)
-                            {
-                                string filename = Path.GetFileName(FileUpload_hinh.FileName.ToString());
-                                FileUpload_hinh.SaveAs(Server.MapPath("~/Resource/image/") + filename);
 
-                            }
-                        }
-
-                    }
-                    catch { }
-
+                    DateTime foo = DateTime.UtcNow;
+                    long unixTime = ((DateTimeOffset)foo).ToUnixTimeSeconds();
+                    fn = "DV" + unixTime.ToString() + "_" + System.IO.Path.GetFileName(FileUpload_hinh.PostedFile.FileName);
+                    location = Server.MapPath("~/Resource/image/") + fn;
+                    FileUpload_hinh.PostedFile.SaveAs(location);
                 }
 
                 if (!String.IsNullOrEmpty(txt_tenSP.Text) && !String.IsNullOrEmpty(txt_moTa.Text)
@@ -55,7 +47,7 @@ namespace SpaWeb.Admin.Product
                     sp.MA_SP = Convert.ToInt32(idSP);
                     sp.TEN_SP = txt_tenSP.Text;
                     sp.MO_TA = txt_moTa.Text;
-                    sp.ANH = Path.GetFileName(FileUpload_hinh.FileName.ToString());
+                    sp.ANH = fn;
                     sp.GIA = Convert.ToDouble(txt_gia.Text);
 
                     int result = spDAL.Update(sp);

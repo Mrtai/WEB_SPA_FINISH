@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_SPAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_SPAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CartItem">
           <Key>
             <PropertyRef Name="CartID" />
@@ -105,7 +105,7 @@
           <Property Name="MA_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TEN_SP" Type="nvarchar" MaxLength="50" />
           <Property Name="MO_TA" Type="ntext" />
-          <Property Name="ANH" Type="varchar" MaxLength="100" />
+          <Property Name="ANH" Type="text" />
           <Property Name="GIA" Type="float" />
         </EntityType>
         <EntityType Name="TAI_KHOAN">
@@ -307,8 +307,7 @@
             <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_SPAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -322,7 +321,7 @@
           <Property Name="NgayTao" Type="DateTime" Precision="3" />
           <Property Name="MA_SP" Type="Int32" />
           <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK_CartItem_KHACH_HANG" FromRole="CartItem" ToRole="KHACH_HANG" />
-          <NavigationProperty Name="SAN_PHAM" Relationship="Self.FK_CartItem_SAN_PHAM" FromRole="CartItem" ToRole="SAN_PHAM" />
+          <NavigationProperty Name="SAN_PHAM" Relationship="DB_SPAModel.FK_CartItem_SAN_PHAM" FromRole="CartItem" ToRole="SAN_PHAM" />
         </EntityType>
         <EntityType Name="CHI_NHANH">
           <Key>
@@ -345,7 +344,7 @@
           <Property Name="SO_LUONG" Type="Int32" />
           <Property Name="THANH_TIEN" Type="Double" />
           <NavigationProperty Name="HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__HOA_DON" FromRole="CHI_TIET_HOA_DON" ToRole="HOA_DON" />
-          <NavigationProperty Name="SAN_PHAM" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="CHI_TIET_HOA_DON" ToRole="SAN_PHAM" />
+          <NavigationProperty Name="SAN_PHAM" Relationship="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="CHI_TIET_HOA_DON" ToRole="SAN_PHAM" />
         </EntityType>
         <EntityType Name="DICH_VU">
           <Key>
@@ -424,18 +423,6 @@
           <Property Name="QUYEN" Type="Int32" />
           <NavigationProperty Name="CHI_NHANH" Relationship="Self.FK_NHAN_VIEN_CHI_NHANH" FromRole="NHAN_VIEN" ToRole="CHI_NHANH" />
         </EntityType>
-        <EntityType Name="SAN_PHAM">
-          <Key>
-            <PropertyRef Name="MA_SP" />
-          </Key>
-          <Property Name="MA_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="GIA" Type="Double" />
-          <NavigationProperty Name="CartItems" Relationship="Self.FK_CartItem_SAN_PHAM" FromRole="SAN_PHAM" ToRole="CartItem" />
-          <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />
-        </EntityType>
         <EntityType Name="TAI_KHOAN">
           <Key>
             <PropertyRef Name="MA_TK" />
@@ -456,18 +443,6 @@
             </Principal>
             <Dependent Role="CartItem">
               <PropertyRef Name="MA_KH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CartItem_SAN_PHAM">
-          <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="0..1" />
-          <End Role="CartItem" Type="Self.CartItem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SAN_PHAM">
-              <PropertyRef Name="MA_SP" />
-            </Principal>
-            <Dependent Role="CartItem">
-              <PropertyRef Name="MA_SP" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -504,18 +479,6 @@
             </Principal>
             <Dependent Role="CHI_TIET_HOA_DON">
               <PropertyRef Name="MA_HD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM">
-          <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="1" />
-          <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SAN_PHAM">
-              <PropertyRef Name="MA_SP" />
-            </Principal>
-            <Dependent Role="CHI_TIET_HOA_DON">
-              <PropertyRef Name="MA_SP" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -589,14 +552,9 @@
           <EntitySet Name="LICH_HEN" EntityType="Self.LICH_HEN" />
           <EntitySet Name="LOAI_DICHVU" EntityType="Self.LOAI_DICHVU" />
           <EntitySet Name="NHAN_VIEN" EntityType="Self.NHAN_VIEN" />
-          <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" />
           <EntitySet Name="TAI_KHOAN" EntityType="Self.TAI_KHOAN" />
           <AssociationSet Name="FK_CartItem_KHACH_HANG" Association="Self.FK_CartItem_KHACH_HANG">
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
-            <End Role="CartItem" EntitySet="CartItems" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CartItem_SAN_PHAM" Association="Self.FK_CartItem_SAN_PHAM">
-            <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
             <End Role="CartItem" EntitySet="CartItems" />
           </AssociationSet>
           <AssociationSet Name="FK_LICH_HEN_O_CHI_NHAN" Association="Self.FK_LICH_HEN_O_CHI_NHAN">
@@ -609,10 +567,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_CHI_TIET_CHI_TIET__HOA_DON" Association="Self.FK_CHI_TIET_CHI_TIET__HOA_DON">
             <End Role="HOA_DON" EntitySet="HOA_DON" />
-            <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM" Association="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM">
-            <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
             <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
           </AssociationSet>
           <AssociationSet Name="FK_DICH_VU_LOAI_DICHVU" Association="Self.FK_DICH_VU_LOAI_DICHVU">
@@ -635,7 +589,52 @@
             <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
             <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
           </AssociationSet>
+          <EntitySet Name="SAN_PHAM" EntityType="DB_SPAModel.SAN_PHAM" />
+          <AssociationSet Name="FK_CartItem_SAN_PHAM" Association="DB_SPAModel.FK_CartItem_SAN_PHAM">
+            <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+            <End Role="CartItem" EntitySet="CartItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM" Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM">
+            <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+            <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="SAN_PHAM">
+          <Key>
+            <PropertyRef Name="MA_SP" />
+          </Key>
+          <Property Name="MA_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ANH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="GIA" Type="Double" />
+          <NavigationProperty Name="CartItems" Relationship="DB_SPAModel.FK_CartItem_SAN_PHAM" FromRole="SAN_PHAM" ToRole="CartItem" />
+          <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />
+        </EntityType>
+        <Association Name="FK_CartItem_SAN_PHAM">
+          <End Type="DB_SPAModel.SAN_PHAM" Role="SAN_PHAM" Multiplicity="0..1" />
+          <End Type="DB_SPAModel.CartItem" Role="CartItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SAN_PHAM">
+              <PropertyRef Name="MA_SP" />
+            </Principal>
+            <Dependent Role="CartItem">
+              <PropertyRef Name="MA_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHI_TIET_CHI_TIET__SAN_PHAM">
+          <End Type="DB_SPAModel.SAN_PHAM" Role="SAN_PHAM" Multiplicity="1" />
+          <End Type="DB_SPAModel.CHI_TIET_HOA_DON" Role="CHI_TIET_HOA_DON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SAN_PHAM">
+              <PropertyRef Name="MA_SP" />
+            </Principal>
+            <Dependent Role="CHI_TIET_HOA_DON">
+              <PropertyRef Name="MA_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -743,17 +742,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SAN_PHAM">
-            <EntityTypeMapping TypeName="DB_SPAModel.SAN_PHAM">
-              <MappingFragment StoreEntitySet="SAN_PHAM">
-                <ScalarProperty Name="MA_SP" ColumnName="MA_SP" />
-                <ScalarProperty Name="TEN_SP" ColumnName="TEN_SP" />
-                <ScalarProperty Name="MO_TA" ColumnName="MO_TA" />
-                <ScalarProperty Name="ANH" ColumnName="ANH" />
-                <ScalarProperty Name="GIA" ColumnName="GIA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TAI_KHOAN">
             <EntityTypeMapping TypeName="DB_SPAModel.TAI_KHOAN">
               <MappingFragment StoreEntitySet="TAI_KHOAN">
@@ -762,6 +750,17 @@
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
                 <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="TRANG_THAI" ColumnName="TRANG_THAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAN_PHAM">
+            <EntityTypeMapping TypeName="DB_SPAModel.SAN_PHAM">
+              <MappingFragment StoreEntitySet="SAN_PHAM">
+                <ScalarProperty Name="GIA" ColumnName="GIA" />
+                <ScalarProperty Name="ANH" ColumnName="ANH" />
+                <ScalarProperty Name="MO_TA" ColumnName="MO_TA" />
+                <ScalarProperty Name="TEN_SP" ColumnName="TEN_SP" />
+                <ScalarProperty Name="MA_SP" ColumnName="MA_SP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

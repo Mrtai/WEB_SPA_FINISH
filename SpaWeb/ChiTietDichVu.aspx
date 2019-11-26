@@ -6,7 +6,7 @@
             <ItemTemplate>
                 <div class="row">
                     <div class="col-lg-8">
-                        <img class="group list-group-image img-fluid" src="<%# Item.IMAGE%>" alt="" width="100%" height="350px" />
+                        <img class="group list-group-image img-fluid" src="Resource/image/<%# Item.IMAGE%>" alt="" width="100%" height="350px" />
                     </div>
                     <div class="col-lg-4">
                         <h2 style="align-items: center; text-align: center"><%# Item.TEN_DICH_VU %></h2>

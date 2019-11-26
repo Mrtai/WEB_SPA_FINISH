@@ -14,19 +14,19 @@
         <EntityTypeShape EntityType="DB_SPAModel.LICH_HEN" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_SPAModel.LOAI_DICHVU" Width="1.5" PointX="1.5" PointY="19.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_SPAModel.NHAN_VIEN" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_SPAModel.SAN_PHAM" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_SPAModel.TAI_KHOAN" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
         <AssociationConnector Association="DB_SPAModel.FK_CartItem_KHACH_HANG" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_SPAModel.FK_CartItem_SAN_PHAM" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_O_CHI_NHAN" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_NHAN_VIEN_CHI_NHANH" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__HOA_DON" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_DICH_VU_LOAI_DICHVU" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_HOA_DON_THANH_TOA_KHACH_HA" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_LICH_HEN_CUA_KHACH_HA" ManuallyRouted="false" />
         <AssociationConnector Association="DB_SPAModel.FK_TAI_KHOA_CO_KHACH_HA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_SPAModel.SAN_PHAM" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="DB_SPAModel.FK_CartItem_SAN_PHAM" />
+        <AssociationConnector Association="DB_SPAModel.FK_CHI_TIET_CHI_TIET__SAN_PHAM" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

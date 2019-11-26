@@ -11,7 +11,7 @@
                     <div class="row" style="width:100%;border:solid;border-bottom:solid;border-width:1px;border-left:none;border-top:none;border-right:none">
                         <div class="col-lg-3">
                          <div class="img-event">
-                            <img class="group list-group-image img-fluid" src="<%# Eval("IMAGE")%>" alt="" width="100px" height="100px"/>
+                            <img class="group list-group-image img-fluid" src="../Resource/image/<%# Eval("IMAGE")%>" alt="" width="100px" height="100px"/>
                         </div>
                         </div>
                         <div class="col-lg-5">
