@@ -28,7 +28,7 @@ namespace DAL
         public Nullable<int> DANH_GIA { get; set; }
         public string IMAGE { get; set; }
     
-        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
         public virtual LOAI_DICHVU LOAI_DICHVU { get; set; }
+        public virtual ICollection<LICH_HEN> LICH_HEN { get; set; }
     }
 }

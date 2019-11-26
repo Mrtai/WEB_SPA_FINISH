@@ -1,5 +1,6 @@
 ﻿using DAL;
 using DAL.DAL;
+using DAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace SpaWeb.User.Product
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -28,34 +29,43 @@ namespace SpaWeb.User.Product
 
         protected void btn_AddCart_Click(object sender, EventArgs e)
         {
-            cartItemDAL cart = new cartItemDAL();
-            var item = new CartItem();
-
-            int id= Convert.ToInt32(Request.QueryString["MaSP"]);
+            int id = Convert.ToInt32(Request.QueryString["MaSP"]);
             TextBox t = (TextBox)sanPhamDetail.Row.FindControl("txt_soLuong");
-
-            
-            var result = cart.GetDVByMa(1, id);
-            if (result.Count() == 0)
+            if (Session["cart"] == null)
             {
-                item.MA_SP = id;
-                item.MA_KH = 1;
-                item.NgayTao = DateTime.Now;
-                item.SoLuong = Convert.ToInt32(t.Text);
-
-                cart.Add(item);
+                List<CartModel> listcart = new List<CartModel>();
+                CartModel cart = new CartModel();
+                cart.id = 0;
+                cart.MA_SP = id;
+                cart.SO_LUONG = Convert.ToInt32(t.Text);
+                listcart.Add(cart);
+                Session["cart"] = listcart;
                 
             }
             else
             {
-                item.MA_SP = id;
-                item.MA_KH = 1;
-                item.NgayTao = DateTime.Now;
-                item.SoLuong = Convert.ToInt32(t.Text);
-                cart.Update2(item);
-               
+                bool check = true;
+                List<CartModel> list = (List<CartModel>)Session["cart"];
+                int lenght = list.Count;
+                foreach(var i in list){
+                    if(i.MA_SP == id)
+                    {
+                        i.SO_LUONG += Convert.ToInt32(t.Text);
+                        check = false;
+                    }
+                }
+                if (check)
+                {
+                    CartModel cart = new CartModel();
+                    cart.id = lenght;
+                    cart.MA_SP = id;
+                    cart.SO_LUONG = Convert.ToInt32(t.Text);
+                    list.Add(cart);
+                }
+                Session["cart"] = list;
             }
-            
+
+            Response.Redirect("GioHang.aspx");
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -63,3 +73,31 @@ namespace SpaWeb.User.Product
 
     }
 }
+
+//cartItemDAL cart = new cartItemDAL();
+//var item = new CartItem();
+
+//int id= Convert.ToInt32(Request.QueryString["MaSP"]);
+//TextBox t = (TextBox)sanPhamDetail.Row.FindControl("txt_soLuong");
+
+
+//var result = cart.GetDVByMa(1, id);
+//if (result.Count() == 0)
+//{
+//    item.MA_SP = id;
+//    item.MA_KH = 1;
+//    item.NgayTao = DateTime.Now;
+//    item.SoLuong = Convert.ToInt32(t.Text);
+
+//    cart.Add(item);
+
+//}
+//else
+//{
+//    item.MA_SP = id;
+//    item.MA_KH = 1;
+//    item.NgayTao = DateTime.Now;
+//    item.SoLuong = Convert.ToInt32(t.Text);
+//    cart.Update2(item);
+
+//}

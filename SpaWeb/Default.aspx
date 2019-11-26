@@ -73,7 +73,7 @@
     <script>
         $(document).ready(function () {
             $('#myCarousel').carousel({
-                interval: 1000
+                interval: 3000
             });
 
             var clickEvent = false;
@@ -103,25 +103,24 @@
        <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
                  <input id="tab<%# Container.ItemIndex +1 %>" type="radio" name="tabs" checked>
-                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>
-                    
+                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>                  
             </ItemTemplate>
            
         </asp:Repeater>
         <asp:Repeater ID="Repeater3" runat="server" OnItemDataBound="Repeater3_ItemDataBound">
             <ItemTemplate>
-                <section id="content<%# Container.ItemIndex +1 %>" class="tab-content">
+                <section id="content<%#Container.ItemIndex +1 %>" class="tab-content">
             <div class="row">
                 <asp:Repeater ID="Repeater4" runat="server">
                     <ItemTemplate>
                          <div class="col-md-4">
-                            <div class="card">
+                            <div class="card bg-light">
                                 <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
                                 <div class="card-body">
                                     <h2> <%# Eval("TEN_DICH_VU")%></h2>
-                                    <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                                    <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                                    <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -238,40 +237,59 @@
                 <div class="sp-column ">
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="documentation-index">
                             <a href="/documentation/sp-page-builder/sp-page-builder-2-x">
-                                <img src="//www.joomshaper.com/images/2017/01/27/page-builder.png" alt="SP Page Builder">
+                                <img src="https://gaspa.vn/wp-content/uploads/2019/05/member-2.jpg" alt="SP Page Builder">
                             </a>
-                            <h2>SP Page Builder</h2>
+                            <h2>Member</h2>
                             <div class="documentation-shortdesc">
-                                The complete knowledge base and best crafted guide to SP Page Builder you will ever need.
+                                Tích lũy điểm thành viên khi sử dụng dịch vụ tại Gà.
+                                Được nâng cấp lên thành Gold Member khi đủ điểm tích lũy
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/sp-page-builder/sp-page-builder-2-x">View Documentation</a>
+                            <a class="btn btn-doc-outline" href="/documentation/sp-page-builder/sp-page-builder-2-x">Xem thêm</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="documentation-index">
                             <a href="/documentation/joomla-templates/rhino">
-                                <img src="//www.joomshaper.com/images/2017/01/27/template.png" alt="Joomla Templates">
+                                <img src="https://gaspa.vn/wp-content/uploads/2019/05/gold-1.jpg" alt="Joomla Templates">
                             </a>
-                            <h2>Joomla Templates</h2>
+                            <h2>Gold Member</h2>
                             <div class="documentation-shortdesc">
-                                Explore our extensive resources to get an in-depth understanding on our Joomla templates.
+                                Giảm 5% khi sử dụng dịch vụ tại Gà Spa (Áp dụng cho tất cả dịch vụ).
+                                Tích lũy đủ 10.000.000 khi sử dụng dịch vụ tại Gà Spa.
+                                Được nâng cấp lên thành Diamond Member khi đủ điểm tích lũy.
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/joomla-templates/rhino">View Documentation</a>
+                            <a class="btn btn-doc-outline" href="/documentation/joomla-templates/rhino">Xem thêm</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="documentation-index">
                             <a href="/documentation/joomla-extensions/sp-easyimagegallery">
-                                <img src="//www.joomshaper.com/images/2017/01/27/extensions.png" alt="Joomla Extensions">
+                                <img src="https://gaspa.vn/wp-content/uploads/2019/05/diamond-1.jpg" alt="Joomla Extensions">
                             </a>
-                            <h2>Joomla Extensions</h2>
+                            <h2>Diamond Member</h2>
                             <div class="documentation-shortdesc">
-                                Learn ins and outs of our powerful, innovative and world wide used extensions for Joomla.
+                                Giảm 10% khi sử dụng dịch vụ. Gà Spa (Áp dụng cho tất cả dịch vụ).
+                                Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.
+                                Được nâng cấp lên thành Platinum Member khi đủ điểm tích lũy
                             </div>
-                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">View Documentation</a>
+                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="documentation-index">
+                            <a href="/documentation/joomla-extensions/sp-easyimagegallery">
+                                <img src="https://gaspa.vn/wp-content/uploads/2019/05/diamond-1.jpg" alt="Joomla Extensions">
+                            </a>
+                            <h2>Platinum Member</h2>
+                            <div class="documentation-shortdesc">
+                                Giảm 10% khi sử dụng dịch vụ. Gà Spa (Áp dụng cho tất cả dịch vụ).
+                                Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.
+                                Được nâng cấp lên thành Platinum Member khi đủ điểm tích lũy
+                            </div>
+                            <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">Xem thêm</a>
                         </div>
                     </div>
 

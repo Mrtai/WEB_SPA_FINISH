@@ -16,7 +16,8 @@ namespace SpaWeb.Admin.Product
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if(ViewState["Edit_sp"] == null || !Convert.ToBoolean(ViewState["Edit_sp"]))
+                addDataIntoControl();
         }
 
         protected void btn_Save_Click(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace SpaWeb.Admin.Product
             {
                 lb_messenger.Text = ex.ToString();
             }
+            ViewState["Edit_sp"] = false;
         }
 
         protected void btn_Reset_Click(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace SpaWeb.Admin.Product
             {
                 lb_messenger.Text = ex.ToString();
             }
-
+            ViewState["Edit_sp"] = true;
         }
     }
 }

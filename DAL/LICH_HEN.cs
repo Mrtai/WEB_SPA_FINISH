@@ -24,7 +24,7 @@ namespace DAL
         public Nullable<bool> TRANG_THAI { get; set; }
     
         public virtual CHI_NHANH CHI_NHANH { get; set; }
-        public virtual DICH_VU DICH_VU { get; set; }
         public virtual KHACH_HANG KHACH_HANG { get; set; }
+        public virtual DICH_VU DICH_VU { get; set; }
     }
 }

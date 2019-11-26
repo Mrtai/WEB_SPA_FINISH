@@ -22,6 +22,42 @@ namespace SpaWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl logo;
         
         /// <summary>
+        /// lb_count_cart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_count_cart;
+        
+        /// <summary>
+        /// lb_name_user control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_name_user;
+        
+        /// <summary>
+        /// link_login control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink link_login;
+        
+        /// <summary>
+        /// link_dangky control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink link_dangky;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

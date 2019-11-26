@@ -19,15 +19,24 @@ namespace DAL.DAL
         public int Update(DICH_VU p)
         {
             int result = 0;
-            DICH_VU k = context.DICH_VU.FirstOrDefault(m => m.MA_DV == p.MA_DV);
-            if (k != null)
+            try
             {
-                k.TEN_DICH_VU = p.TEN_DICH_VU;
-                k.GIA = p.GIA;
-                k.CHI_TIET = p.CHI_TIET;
+               
+                DICH_VU k = context.DICH_VU.FirstOrDefault(m => m.MA_DV == p.MA_DV);
+                if (k != null)
+                {
+                    k.TEN_DICH_VU = p.TEN_DICH_VU;
+                    k.GIA = p.GIA;
+                    k.CHI_TIET = p.CHI_TIET;
+                }
+                result = context.SaveChanges();
+                
+            }catch(Exception ex)
+            {
+                ex.ToString();
             }
-            result = context.SaveChanges();
             return result;
+
         }
 
         public int Delete(int pMa)
@@ -42,6 +51,12 @@ namespace DAL.DAL
         {
             List<DICH_VU> list = new List<DICH_VU>();
             list = context.DICH_VU.ToList();
+            return list;
+        }
+        public List<DICH_VU> GetList_Hot()
+        {
+            List<DICH_VU> list = new List<DICH_VU>();
+            list = context.DICH_VU.OrderBy(x=>x.SOLUONG_DUNG).Take(6).ToList();
             return list;
         }
 
