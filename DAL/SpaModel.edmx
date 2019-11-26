@@ -371,7 +371,18 @@
           <NavigationProperty Name="CHI_NHANH" Relationship="Self.FK_LICH_HEN_O_CHI_NHAN" FromRole="LICH_HEN" ToRole="CHI_NHANH" />
           <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK_LICH_HEN_CUA_KHACH_HA" FromRole="LICH_HEN" ToRole="KHACH_HANG" />
           <Property Name="TRANG_THAI" Type="Boolean" />
-          <NavigationProperty Name="DICH_VU" Relationship="DB_SPAModel.FK_LICH_HEN_LAM_DICH_VU" FromRole="LICH_HEN" ToRole="DICH_VU" />
+        </EntityType>
+        <EntityType Name="SAN_PHAM">
+          <Key>
+            <PropertyRef Name="MA_SP" />
+          </Key>
+          <Property Name="MA_SP" Type="Int32" Nullable="false" />
+          <Property Name="TEN_SP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MO_TA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ANH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GIA" Type="Double" />
+          <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK_CHI_TIET_CHI_TIET__SAN_PHAM" FromRole="SAN_PHAM" ToRole="CHI_TIET_HOA_DON" />
+          <NavigationProperty Name="CartItems" Relationship="DB_SPAModel.FK_CartItem_SAN_PHAM" FromRole="SAN_PHAM" ToRole="CartItem" />
         </EntityType>
         <Association Name="FK_LICH_HEN_O_CHI_NHAN">
           <End Role="CHI_NHANH" Type="Self.CHI_NHANH" Multiplicity="0..1" />

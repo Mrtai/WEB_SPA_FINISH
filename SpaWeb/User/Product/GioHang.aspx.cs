@@ -91,7 +91,6 @@ namespace SpaWeb.User.Product
                 }
 
                 Page.Response.Redirect(Page.Request.Url.ToString(), true);
-               
             }
             
         }
