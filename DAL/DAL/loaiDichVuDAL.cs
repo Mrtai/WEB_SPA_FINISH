@@ -8,7 +8,7 @@ namespace DAL.DAL
 {
     public class loaiDichVuDAL
     {
-        private DB_SPAEntities context = new DB_SPAEntities();
+        private DB_SPAEntities1 context = new DB_SPAEntities1();
         public int Add(LOAI_DICHVU p)
         {
             int result = 0;

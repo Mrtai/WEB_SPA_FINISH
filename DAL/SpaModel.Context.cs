@@ -13,10 +13,10 @@ namespace DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_SPAEntities : DbContext
+    public partial class DB_SPAEntities1 : DbContext
     {
-        public DB_SPAEntities()
-            : base("name=DB_SPAEntities")
+        public DB_SPAEntities1()
+            : base("name=DB_SPAEntities1")
         {
         }
     
@@ -25,16 +25,16 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<CartItem> CartItems { get; set; }
         public DbSet<CHI_NHANH> CHI_NHANH { get; set; }
         public DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LICH_HEN> LICH_HEN { get; set; }
-        public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
         public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
-        public DbSet<CartItem> CartItems { get; set; }
         public DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<SAN_PHAM> SAN_PHAM { get; set; }
+        public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace DAL.DAL
 {
     public class sanPhamDAL
     {
-        private DB_SPAEntities context = new DB_SPAEntities();
+        private DB_SPAEntities1 context = new DB_SPAEntities1();
         public int Add(SAN_PHAM p)
         {
             int result = 0;

@@ -112,32 +112,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="SpaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SpaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="SpaModel.edmx.diagram">
       <DependentUpon>SpaModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SpaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SpaModel.Context.cs</LastGenOutput>
       <DependentUpon>SpaModel.edmx</DependentUpon>
+      <LastGenOutput>SpaModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="SpaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SpaModel.edmx</DependentUpon>
       <LastGenOutput>SpaModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
