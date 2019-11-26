@@ -63,9 +63,11 @@ namespace SpaWeb.User.Product
                     list.Add(cart);
                 }
                 Session["cart"] = list;
+                
             }
 
-            Response.Redirect("GioHang.aspx");
+            //Response.Redirect("GioHang.aspx");
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
 
         // The id parameter should match the DataKeyNames value set on the control
