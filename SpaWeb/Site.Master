@@ -18,6 +18,8 @@
      <link href="~/Content/layout.css" rel="stylesheet" />
      <link href="~/Content/style.css" rel="stylesheet" />
      <link href="~/Content/gird.css" rel="stylesheet" />
+     <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 
     
@@ -272,7 +274,7 @@ a {
  section {
   clear: both;
   padding-top: 10px;
-  display: none;
+  /*display: none;*/
 }
 
 label {
@@ -496,7 +498,7 @@ label .fa {
                         <ul class="nav navbar-nav">
 
                             <li class="at"><a class="active" runat="server" href="~/" style="color: #000000">Home</a></li>
-                            <li><a runat="server" href="~/About" style="color: #000000">Dịch vụ</a></li>
+                            <li><a runat="server" href="~/DichVu" style="color: #000000">Dịch vụ</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000">Sản Phẩm
                             <span class="caret"></span></a>
@@ -506,7 +508,17 @@ label .fa {
                                     <li><a runat="server" href="~/">Page 1-3</a></li>
                                 </ul>
                             </li>
-                            <li><a runat="server" href="~/User/Contact/contact.aspx" style="color: #000000">Liên hệ -đặt lịch</a>
+                            <li><a runat="server" href="~/User/Contact/contact.aspx" style="color: #000000">Liên hệ -đặt lịch</a></li>
+                            
+                            <li><a href="~/User/Product/GioHang.aspx" runat="server" style="color: #000000">Cart <i class="fa fa-shopping-cart cart-icon"></i>
+                                (<asp:Label ID="lb_count_cart" runat="server" Text="0"></asp:Label>)</a></li>
+                            <li style="margin-top:15px">
+                                <asp:Label ID="lb_name_user" Visible="false" runat="server" Text="Hi tài"></asp:Label></li>
+                            <li>
+                                <asp:HyperLink ID="link_login" Visible="false" NavigateUrl="~/User/Login/login.aspx" runat="server" style="color: #000000">Đăng nhập</asp:HyperLink></li>
+                            <li>
+                                <asp:HyperLink ID="link_dangky" Visible="false" NavigateUrl="~/User/Login/register.aspx" runat="server" style="color: #000000">Đăng ký</asp:HyperLink></li>
+
                         </ul>
                     </div>
 

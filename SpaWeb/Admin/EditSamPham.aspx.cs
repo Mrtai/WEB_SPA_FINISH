@@ -16,7 +16,8 @@ namespace SpaWeb.Admin.Product
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if(ViewState["Edit_sp"] == null || !Convert.ToBoolean(ViewState["Edit_sp"]))
+                addDataIntoControl();
         }
 
         protected void btn_Save_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace SpaWeb.Admin.Product
                 sp.MA_SP = Convert.ToInt32(idSP);
                 sp.TEN_SP = txt_tenSP.Text;
                 sp.MO_TA = txt_moTa.Text;
-                sp.ANH = Path.GetFileName(FileUpload_hinh.FileName.ToString());
+                //sp.ANH = Path.GetFileName(FileUpload_hinh.FileName.ToString());
                 sp.GIA = Convert.ToDouble(txt_gia.Text);
 
                 int result = spDAL.Update(sp);
@@ -72,6 +73,7 @@ namespace SpaWeb.Admin.Product
             {
                 lb_messenger.Text = "Phải Nhập Đủ Các Trường";                
             }
+            ViewState["Edit_sp"] = false;
         }
 
         protected void btn_Reset_Click(object sender, EventArgs e)
@@ -93,7 +95,7 @@ namespace SpaWeb.Admin.Product
                
                 txt_gia.Text = sp.GIA.ToString();
             }
-
+            ViewState["Edit_sp"] = true;
         }
     }
 }

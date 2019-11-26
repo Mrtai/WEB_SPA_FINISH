@@ -114,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\AddDichVu.aspx" />
+    <Content Include="Admin\EditDichVu.aspx" />
+    <Content Include="Admin\EditDichVuDetail.aspx" />
     <Content Include="Admin\AddNhanVien.aspx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\DanhSachDatLich.aspx" />
@@ -181,6 +184,7 @@
     <Content Include="Admin\vendors\js\vendor.bundle.addons.js" />
     <Content Include="Admin\vendors\js\vendor.bundle.base.js" />
     <Content Include="Calendar.ascx" />
+    <Content Include="ChiTietDichVu.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -191,6 +195,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demo.aspx" />
+    <Content Include="DichVu.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -668,6 +673,10 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddDichVu.aspx.cs">
+      <DependentUpon>AddDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Admin\AddNhanVien.aspx.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -707,11 +716,25 @@
       <DependentUpon>EditNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Admin\AddDichVu.aspx.designer.cs">
+      <DependentUpon>AddDichVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditDichVu.aspx.cs">
+      <DependentUpon>EditDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Admin\EditNhanVien.aspx.designer.cs">
       <DependentUpon>EditNhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\KetQuaDatLich.aspx.cs">
       <DependentUpon>KetQuaDatLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditDichVu.aspx.designer.cs">
+      <DependentUpon>EditDichVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditDichVuDetail.aspx.cs">
+      <DependentUpon>EditDichVuDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\KetQuaDatLich.aspx.designer.cs">
@@ -720,6 +743,9 @@
     <Compile Include="Admin\DetailBill.aspx.cs">
       <DependentUpon>DetailBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditDichVuDetail.aspx.designer.cs">
+      <DependentUpon>EditDichVuDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\DetailBill.aspx.designer.cs">
       <DependentUpon>DetailBill.aspx</DependentUpon>
@@ -789,6 +815,13 @@
     <Compile Include="Calendar.ascx.designer.cs">
       <DependentUpon>Calendar.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietDichVu.aspx.cs">
+      <DependentUpon>ChiTietDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTietDichVu.aspx.designer.cs">
+      <DependentUpon>ChiTietDichVu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -809,6 +842,13 @@
     </Compile>
     <Compile Include="Demo.aspx.designer.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.aspx.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DichVu.aspx.designer.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
