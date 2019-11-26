@@ -114,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\AddDichVu.aspx" />
+    <Content Include="Admin\EditDichVu.aspx" />
+    <Content Include="Admin\EditDichVuDetail.aspx" />
     <Content Include="Admin\ListBill.aspx" />
     <Content Include="Admin\AddSanPham.aspx" />
     <Content Include="Admin\EditSamPham.aspx" />
@@ -172,6 +175,7 @@
     <Content Include="Admin\vendors\js\vendor.bundle.addons.js" />
     <Content Include="Admin\vendors\js\vendor.bundle.base.js" />
     <Content Include="Calendar.ascx" />
+    <Content Include="ChiTietDichVu.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -182,6 +186,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demo.aspx" />
+    <Content Include="DichVu.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -659,6 +664,27 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddDichVu.aspx.cs">
+      <DependentUpon>AddDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddDichVu.aspx.designer.cs">
+      <DependentUpon>AddDichVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditDichVu.aspx.cs">
+      <DependentUpon>EditDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditDichVu.aspx.designer.cs">
+      <DependentUpon>EditDichVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditDichVuDetail.aspx.cs">
+      <DependentUpon>EditDichVuDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditDichVuDetail.aspx.designer.cs">
+      <DependentUpon>EditDichVuDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListBill.aspx.cs">
       <DependentUpon>ListBill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -717,6 +743,13 @@
     <Compile Include="Calendar.ascx.designer.cs">
       <DependentUpon>Calendar.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietDichVu.aspx.cs">
+      <DependentUpon>ChiTietDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTietDichVu.aspx.designer.cs">
+      <DependentUpon>ChiTietDichVu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -737,6 +770,13 @@
     </Compile>
     <Compile Include="Demo.aspx.designer.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.aspx.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DichVu.aspx.designer.cs">
+      <DependentUpon>DichVu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -816,9 +856,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>

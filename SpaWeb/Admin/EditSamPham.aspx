@@ -4,11 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-    
+
     <link href="../../Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="../../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../../Content/bootstrap.css" rel="stylesheet" />
@@ -35,7 +31,7 @@
                     <asp:Label ID="Label2" runat="server" CssClass="control-label" Text="Mô Tả"></asp:Label>
                     
                     <asp:TextBox ID="txt_moTa" TextMode="multiline" Rows="5" runat="server" CssClass="form-control" Height="150px"></asp:TextBox>
-                    <script>CKEDITOR.replace('txt_moTa');</script>
+                    <script>CKEDITOR.replace('ContentPlaceHolder1_txt_moTa');</script>
 
 
                 </div>

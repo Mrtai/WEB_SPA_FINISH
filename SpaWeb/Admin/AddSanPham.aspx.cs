@@ -53,7 +53,7 @@ namespace SpaWeb.Admin.Product
                 sp.MO_TA = txt_moTa.Text;
                 sp.ANH = Path.GetFileName(FileUpload_hinh.FileName.ToString());
                 sp.GIA = Convert.ToDouble(txt_gia.Text);
-
+                
                 int result = spDAL.Add(sp);
 
                 if (result == 1)

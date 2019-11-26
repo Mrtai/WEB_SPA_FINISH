@@ -460,6 +460,7 @@ label .fa {
         }
     </style>
 
+
 </head>
 <body>
     <form runat="server">
@@ -487,16 +488,16 @@ label .fa {
 
 
                 <div class="navbar-collapse collapse row">
-                    <div runat="server" id="logo" style="width: 300px; height: 50px" class="col-md-4">
+                    <div runat="server" id="logo" style="width: 250px; height: 50px" class="col-md-4">
                         <a href="https://gaspa.vn/" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
-                            <img style="width: 300px; height: 50px" class="normal_logo" src="https://gaspa.vn/wp-content/uploads/2019/05/logo-ngang.png" alt="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
+                            <img style="width: 200px; height: 50px" class="normal_logo" src="https://gaspa.vn/wp-content/uploads/2019/05/logo-ngang.png" alt="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả" title="Gà Spa • Trị Mụn Thâm An Toàn &amp; Hiệu Quả">
                         </a>
                     </div>
                     <div class="col-md-8" style="float: right; color: #141414">
                         <ul class="nav navbar-nav">
 
                             <li class="at"><a class="active" runat="server" href="~/" style="color: #000000">Home</a></li>
-                            <li><a runat="server" href="~/About" style="color: #000000">Dịch vụ</a></li>
+                            <li><a runat="server" href="~/DichVu" style="color: #000000">Dịch vụ</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000">Sản Phẩm
                             <span class="caret"></span></a>
@@ -507,6 +508,12 @@ label .fa {
                                 </ul>
                             </li>
                             <li><a runat="server" href="~/User/Contact/contact.aspx" style="color: #000000">Liên hệ -đặt lịch</a>
+
+                          </li>
+                            <li><a runat="server" href="~/User/Contact/contact.aspx" style="color: #000000">Login</a>
+
+                          </li>
+                           
                         </ul>
                     </div>
 

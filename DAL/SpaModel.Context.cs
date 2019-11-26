@@ -27,7 +27,6 @@ namespace DAL
     
         public DbSet<CHI_NHANH> CHI_NHANH { get; set; }
         public DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LICH_HEN> LICH_HEN { get; set; }
@@ -36,5 +35,6 @@ namespace DAL
         public DbSet<TAI_KHOAN> TAI_KHOAN { get; set; }
         public DbSet<LOAI_DICHVU> LOAI_DICHVU { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
     }
 }
