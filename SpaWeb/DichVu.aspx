@@ -7,7 +7,7 @@
     <asp:Repeater ID="Repeaterdata_host" runat="server">
         <ItemTemplate>
             <div class="col-12 col-sm-6 col-md-4 image-grid-item">
-				<div style='background-image: url(<%# Eval("IMAGE")%>);' class="image-grid-cover">
+				<div style='background-image: url(Resource/image/<%# Eval("IMAGE")%>);' class="image-grid-cover">
 					<a href="#" class="image-grid-clickbox" style="padding: 100px;"><%# Eval("TEN_DICH_VU")%></a>
 					
 				</div>
@@ -38,7 +38,7 @@
                     <div class="item col-xs-4 col-md-4 col-lg-4" style="height:auto">
                     <div class="thumbnail card" style="width:100%;height:auto">
                         <div class="img-event">
-                            <img class="group list-group-image img-fluid" src="<%# Eval("IMAGE")%>" alt="" width="100%" height="200px"/>
+                            <img class="group list-group-image img-fluid" src="Resource/image/<%# Eval("IMAGE")%>" alt="" width="100%" height="200px"/>
                         </div>
                         <div class="caption card-body">
                             <h4 class="group card-title inner list-group-item-heading">

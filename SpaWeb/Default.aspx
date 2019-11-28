@@ -60,7 +60,7 @@
     <script>
         $(document).ready(function () {
             $('#myCarousel').carousel({
-                interval: 3000
+                interval: 2000
             });
 
             var clickEvent = false;
@@ -89,14 +89,14 @@
     <div class="tab_container">
        <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
-                 <input id="tab<%# Container.ItemIndex +1 %>" type="radio" name="tabs" checked>
-                    <label for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>                  
+                 <input id="tab<%# Container.ItemIndex +1 %>" class="input" type="radio" name="tabs" checked>
+                    <label class="label" for="tab<%# Container.ItemIndex +1 %>"><i class="fa fa-code"></i><span> <%# Eval("TEN_LOAI")%></span></label>
             </ItemTemplate>
            
         </asp:Repeater>
         <asp:Repeater ID="Repeater3" runat="server" OnItemDataBound="Repeater3_ItemDataBound">
             <ItemTemplate>
-                <section id="content<%#Container.ItemIndex +1 %>" class="tab-content">
+                <section id="content<%#Container.ItemIndex +1 %>" class="tab-content section">
             <div class="row">
                 <asp:Repeater ID="Repeater4" runat="server">
                     <ItemTemplate>
@@ -126,7 +126,7 @@
                                         </div>
                                        
                                     </div>
-                                   <a href="ChiTietDichVu.aspx?MaDV=<%#Eval("MA_DV") %>" class="btn btn-sm btn-info float-right">Xem Thêm</a>
+                                   <a href="ChiTietDichVu.aspx?MaDV=<%#Eval("MA_DV") %>" class="btn btn-sm btn-info float-right">Xem Thêm </a>
                                 </div>
                              </div>
                           </div>
@@ -282,7 +282,7 @@
                             <a href="/documentation/joomla-extensions/sp-easyimagegallery">
                                 <img src="https://gaspa.vn/wp-content/uploads/2019/05/diamond-1.jpg" alt="Joomla Extensions">
                             </a>
-                            <h2>Diamond Member</h2>
+                            <h2>Platinum Member</h2>
                             <div class="documentation-shortdesc">
                                 Giảm 10% khi sử dụng dịch vụ. Gà Spa (Áp dụng cho tất cả dịch vụ).
                                 Tích lũy đủ 20.000.000 khi sử dụng dịch vụ tại Gà Spa.

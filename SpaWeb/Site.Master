@@ -40,10 +40,10 @@
             width: 100%;
             height: 40%;
             background: red;
-            -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+            -webkit-transition: width 1s, height 1s; / For Safari 3.1 to 6.0 /
             transition: width 1s, height 1s;
-            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-name: example; / Safari 4.0 - 8.0 /
+            -webkit-animation-duration: 1s; / Safari 4.0 - 8.0 /
         }
 
             .div_hover:hover {
@@ -52,7 +52,7 @@
                 border-width: 4px;
                 border-style: dotted;
             }*/
-        /* override position and transform in 3.3.x */
+        / override position and transform in 3.3.x /
 
         body {
             padding-top: 20px;
@@ -62,7 +62,7 @@
             margin-bottom: 0;
             padding: 0 40px 30px 40px;
         }
-        /* The controlsy */
+        / The controlsy /
         .carousel-control {
             left: -12px;
             height: 40px;
@@ -76,14 +76,14 @@
             .carousel-control.right {
                 right: -12px;
             }
-        /* The indicators */
+        / The indicators /
         .carousel-indicators {
             right: 50%;
             top: auto;
             bottom: -10px;
             margin-right: -19px;
         }
-            /* The colour of the indicators */
+            / The colour of the indicators /
             .carousel-indicators li {
                 background: #cecece;
             }
@@ -271,14 +271,14 @@ a {
 	position: relative;
 }
 
- section {
+.input, .section {
   clear: both;
   padding-top: 10px;
-  /*display: none;*/
+  display: none;
 }
 
-label {
-  /*font-weight: 700;
+.label {
+  font-weight: 700;
   font-size: 18px;
   display: block;
   float: left;
@@ -288,7 +288,7 @@ label {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  background: #f0f0f0;*/
+  background: #f0f0f0;
 }
 
 #tab1:checked ~ #content1,
@@ -399,29 +399,29 @@ label .fa {
     width: 30%;
 }
 
-.item.list-group-item .list-group-image
-{
-    margin-right: 10px;
-}
-.item.list-group-item .thumbnail
-{
-    margin-bottom: 0px;
-    display: inline-block;
-}
-.item.list-group-item .caption
-{
-    float: left;
-    width: 70%;
-    margin: 0;
-}
+    .item.list-group-item .list-group-image
+    {
+        margin-right: 10px;
+    }
+    .item.list-group-item .thumbnail
+    {
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+    .item.list-group-item .caption
+    {
+        float: left;
+        width: 70%;
+        margin: 0;
+    }
 
-.item.list-group-item:before, .item.list-group-item:after
-{
-    display: table;
-    content: " ";
-}
+    .item.list-group-item:before, .item.list-group-item:after
+    {
+        display: table;
+        content: " ";
+    }
 
-        .item.list-group-item:after {
+.item.list-group-item:after {
             clear: both;
         }
         /*//top dich vu*/
